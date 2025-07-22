@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="A modern cleaning service website" />
+    <meta name="keywords" content="cleaning, service, modern, website" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <title>Laundit</title>
+  </head>
+  <body>
+    <header
+      class="flex px-5 flex-col h-16 justify-around md:h-8 md:flex-row md:items-center bg-[#589167]"
+    >
+      <div class="flex justify-between text-xs md:text-sm md:pr-40 text-nowrap">
+        <p class="flex text-nowrap">
+          &phone; +491234567890 &ThickSpace;
+          <img src="airplane.svg" alt="airplane logo" /> youremail@domain.com
+        </p>
+      </div>
+      <div class="w-32 flex items-center justify-between">
+        <a href="https://www.facebook.com" target="_blank"
+          ><svg
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            height="20"
+            viewBox="0 0 30 30"
+          >
+            <path
+              d="M12,27V15H8v-4h4V8.852C12,4.785,13.981,3,17.361,3c1.619,0,2.475,0.12,2.88,0.175V7h-2.305C16.501,7,16,7.757,16,9.291V11 h4.205l-0.571,4H16v12H12z"
+            ></path></svg
+        ></a>
+        <a href="https://www.twitter.com" target="_blank"
+          ><svg
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="100"
+            height="20"
+            viewBox="0 0 50 50"
+          >
+            <path
+              d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z"
+            ></path></svg
+        ></a>
+        <a href="https://www.instagram.com" target="_blank"
+          ><svg
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="100"
+            height="30"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"
+            ></path></svg
+        ></a>
+      </div>
+    </header>
+    <div
+      class="nav_active transition-[height] duration-500 ease-in-out flex h-18 lg:h-18 m-0 w-full flex-col lg:flex-row justify-around sm:justify-between md:justify-around overflow-hidden items-center  lg:bg-gray-50 bg-gray-950 sticky top-0 z-50"
+    >
+      <div
+        class="w-full min-h-18 flex items-center lg:w-fit justify-around sm:justify-between md:justify-around px-8"
+      >
+        <h4 class="font-bold text-2xl text-gray-50 lg:text-gray-800">
+          NAME <span class="text-shadow-slate-600 text-xs italic"><abbr title="small industry" class="no-underline">small</abbr></span>
+        </h4>
+        <button class="lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="30"
+            height="30"
+            fill="#ffffff"
+            viewBox="0 0 50 50"
+          >
+            <path
+              d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <nav
+        class="w-full h-full lg:flex-1/2 flex flex-col items-center lg:justify-end lg:items-end"
+      >
+        <ul
+          class="text-gray-50 flex w-full h-full bg-gray-950 flex-col lg:bg-transparent justify-between lg:flex-row lg:justify-around lg:text-gray-950 lg:max-w-[600px] px-8 py-4 lg:p-0 lg:mr-14 lg:items-center"
+        >
+          <li class="font-bold text-[#589167]">
+            <a
+              href="#"
+              class="hover:text-[#589167] after:w-0 hover:after:w-full after:content[' '] after:block after:bg-[#4c6653] after:left-0 after:bottom-0 after:absolute relative after:h-[2px] after:transition-all after:duration-300"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-[#589167] after:w-0 hover:after:w-full after:content[' '] after:block after:bg-[#4c6653] after:left-0 after:bottom-0 after:absolute relative after:h-[2px] after:transition-all after:duration-300"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-[#589167] after:w-0 hover:after:w-full after:content[' '] after:block after:bg-[#4c6653] after:left-0 after:bottom-0 after:absolute relative after:h-[2px] after:transition-all after:duration-300"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-[#589167] after:w-0 hover:after:w-full after:content[' '] after:block after:bg-[#4c6653] after:left-0 after:bottom-0 after:absolute relative after:h-[2px] after:transition-all after:duration-300"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main
+      class="bg-[url(https://media.istockphoto.com/id/1147205774/photo/housewife-cleaning-with-vacuum-cleaner.jpg?s=612x612&w=0&k=20&c=gYDkc8XnJ5pQRs-5LvQo_bYfxsax_yqugorBhhTBL7k=)] bg-no-repeat w-full h-screen bg-cover"
+      data-stellar-background-ratio="0.5"
+    >
+      <div class="sm:max-w-[520px] md:max-w-[1200px] mx-auto px-4 h-full">
+        <div class="flex flex-col mx-0 items-center md:items-start h-full justify-center">
+          <h1 class="text-gray-950 max-w-[600px] font-semibold text-5xl/16">
+            CLEANINNG FOR A BETTER AND HEALTIER LIFE
+          </h1>
+          <p class="text-gray-950 max-w-[600px] mt-4 text-lg/6">
+            We are committed to providing the highest quality cleaning services
+            to our customers. Our team of experienced professionals is dedicated
+            to ensuring that your home or business is clean and well-maintained.
+          </p>
+        </div>
+      </div>
+    </main>
+    <div class="flex justify-center lg:justify-start items-center w-full">
+      <div
+      class="flex flex-col md:flex-row justify-center w-[90%] md:justify-start text-gray-50 md:max-w-[1200px]"
+    >
+      <div
+        class="md:-mt-16 flex flex-col lg:flex-row justify-around items-start lg:items-center p-8 shadow-lg bg-[#589167] w-full md:w-auto"
+      >
+        <img class="h-12 mr-6" src="check.svg" alt="Check" />
+        <div class="flex flex-col items-start w-full">
+          <h4 class=" font-black text-xl">
+            100% Satisfaction Guaranteed
+          </h4>
+          <p class="mt-4">
+            We are committed to providing the highest quality cleaning
+            services.
+          </p>
+        </div>
+      </div>
+      <div
+        class="md:-mt-30 flex flex-col lg:flex-row justify-around items-start lg:items-center p-8 shadow-lg bg-[#528760] w-full md:w-auto"
+      >
+        <img class="h-12 mr-6" src="check.svg" alt="Check" />
+        <div class="flex flex-col items-start w-full">
+          <h4 class=" font-black text-xl">
+            Eco-Friendly Products
+          </h4>
+          <p class="mt-4">
+            We use eco-friendly products to ensure a safe environment for
+            you and your family.
+          </p>
+        </div>
+      </div>
+      <div
+        class="md:-mt-45 flex flex-col lg:flex-row justify-around items-start lg:items-center p-8 shadow-lg bg-[#4E815C] w-full md:w-auto"
+      >
+        <img class="h-12 mr-6" src="check.svg" alt="Check" />
+        <div class="flex flex-col items-start w-full">
+          <h4 class=" font-black text-xl">
+            Professional Team
+          </h4>
+          <p class="mt-4">
+            We are committed to providing the highest quality cleaning
+            services.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <footer class="bg-gray-900 flex flex-col md:flex-row items-center justify-between text-gray-50" >
+      <div class="flex flex-wrap items-center justify-between p-6 w-60 " >
+        <a href="https://www.facebook.com" target="_blank"
+          ><svg
+            fill="#ffffff"
+            width="30px"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            height="30"
+            viewBox="0 0 30 30"
+          >
+            <path
+              d="M12,27V15H8v-4h4V8.852C12,4.785,13.981,3,17.361,3c1.619,0,2.475,0.12,2.88,0.175V7h-2.305C16.501,7,16,7.757,16,9.291V11 h4.205l-0.571,4H16v12H12z"
+            ></path></svg
+        ></a>
+        <a href="https://www.twitter.com" target="_blank"
+          ><svg
+            fill="#ffffff"
+            width="30px"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            height="30"
+            viewBox="0 0 50 50"
+          >
+            <path
+              d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z"
+            ></path></svg
+        ></a>
+        <a href="https://www.instagram.com" target="_blank"
+          ><svg
+            fill="#ffffff"
+            width="30px"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            height="30"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"
+            ></path></svg
+        ></a>
+      </div>
+      <div class="flex flex-col items-start justify-center p-8">
+        <h4 class="text-gray-50 font-bold text-lg">Contact Us</h4>
+        <p class="text-gray-200 mt-2">Email:
+          <a href="mailto:her@gmail.com">her@gmail.com</a>
+        </p>
+        <p class="text-gray-200">Phone: +49 123 456789</p>
+        <p class="text-gray-200">Address: 123 Main St, City,
+          Country</p>
+      </div>
+    </footer>
+    <script src="./src/script.js"></script>
+  </body>
+  </html>
+  
