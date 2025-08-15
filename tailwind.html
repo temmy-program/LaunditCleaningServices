@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Cleaning</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+      /* For Swiper navigation and pagination custom colors */
+      .swiper-pagination-bullet { background: #1e90ff; opacity: 0.7; }
+      .swiper-pagination-bullet-active { background: #ffb400; opacity: 1; }
+      .swiper-button-next, .swiper-button-prev { color: #1e90ff; }
+    </style>
+</head>
+
+<body class="bg-[#f4f8fc] font-sans">
+
+    <!-- HERO SECTION -->
+    <section class="hero text-center py-16 px-4 bg-cover bg-center bg-no-repeat" style="background-image: url('image/cleaning.jpg'); min-height: 345px;">
+        <div class="breadcrumbs mb-0">
+            <div class="flex flex-col items-center justify-center text-center">
+                <h1 class="font-semibold text-2xl text-gray-900 mb-2">what your mates are doing follow them do</h1>
+                <h2 class="text-3xl font-bold text-white mb-4">Services</h2>
+                <a href="#" class="btn bg-cyan-600 text-white px-6 py-2 rounded hover:bg-cyan-700 transition">Schedule Pickup</a>
+            </div>
+            <div class="flex justify-center items-center mt-5">
+                <img src="" alt="" class="w-full max-w-xl rounded-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+     <section class="px-6 py-12 max-w-[1400px] mx-auto relative">
+    <!-- Header -->
+    <div class="text-center mb-16 text-white px-4 py-8 bg-[#0099ff] rounded-[30px] border border-[#007acc]">
+        <h2 class="text-[clamp(2.5rem,5vw,4.5rem)] mb-6 font-black tracking-[2px] text-white">
+            Premium Cleaning Services
+        </h2>
+        <p class="text-[1.3rem] font-normal text-white max-w-[800px] mx-auto leading-[1.7]">
+            Transform your space with our professional cleaning solutions. From homes to offices, we deliver spotless
+            results with eco-friendly products and cutting-edge techniques.
+        </p>
+
+        <!-- Trust Indicators -->
+        <div class="flex justify-center gap-12 mt-8 flex-wrap">
+            <div class="flex items-center gap-2 text-white text-[0.95rem] font-semibold">
+                <i class="fas fa-shield-alt text-white text-[1.2rem]"></i>
+                <span>Fully Insured</span>
+            </div>
+            <div class="flex items-center gap-2 text-white text-[0.95rem] font-semibold">
+                <i class="fas fa-leaf text-white text-[1.2rem]"></i>
+                <span>Eco-Friendly</span>
+            </div>
+            <div class="flex items-center gap-2 text-white text-[0.95rem] font-semibold">
+                <i class="fas fa-clock text-white text-[1.2rem]"></i>
+                <span>24/7 Support</span>
+            </div>
+            <div class="flex items-center gap-2 text-white text-[0.95rem] font-semibold">
+                <i class="fas fa-medal text-white text-[1.2rem]"></i>
+                <span>5-Star Rated</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="text-center mb-12 flex justify-center flex-wrap gap-4">
+        <button class="bg-[#00d4ff] text-white py-[14px] px-[28px] text-base rounded-[50px] cursor-pointer font-bold tracking-[0.5px] uppercase border border-[#00b8e6] hover:bg-[#0099cc] transition-all duration-300">
+            All Services
+        </button>
+        <button class="bg-[#0099ff] text-white py-[14px] px-[28px] text-base rounded-[50px] cursor-pointer font-bold tracking-[0.5px] uppercase border border-[#007acc] hover:bg-[#007acc] transition-all duration-300">
+            Office
+        </button>
+        <button class="bg-[#0099ff] text-white py-[14px] px-[28px] text-base rounded-[50px] cursor-pointer font-bold tracking-[0.5px] uppercase border border-[#007acc] hover:bg-[#007acc] transition-all duration-300">
+            Home
+        </button>
+        <button class="bg-[#0099ff] text-white py-[14px] px-[28px] text-base rounded-[50px] cursor-pointer font-bold tracking-[0.5px] uppercase border border-[#007acc] hover:bg-[#007acc] transition-all duration-300">
+            Glass
+        </button>
+        <button class="bg-[#0099ff] text-white py-[14px] px-[28px] text-base rounded-[50px] cursor-pointer font-bold tracking-[0.5px] uppercase border border-[#007acc] hover:bg-[#007acc] transition-all duration-300">
+            Airbnb
+        </button>
+        <button class="bg-[#0099ff] text-white py-[14px] px-[28px] text-base rounded-[50px] cursor-pointer font-bold tracking-[0.5px] uppercase border border-[#007acc] hover:bg-[#007acc] transition-all duration-300">
+            Mould
+        </button>
+        <button class="bg-[#0099ff] text-white py-[14px] px-[28px] text-base rounded-[50px] cursor-pointer font-bold tracking-[0.5px] uppercase border border-[#007acc] hover:bg-[#007acc] transition-all duration-300">
+            Tenancy
+        </button>
+    </div>
+</section>
+
+        <div class="service-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Office Cleaning -->
+            <div class="service-card relative bg-white rounded-xl shadow-lg p-6 text-center opacity-0 translate-y-5 transition-all duration-400">
+                <span class="badge absolute top-4 left-4 bg-yellow-400 text-gray-800 text-xs font-bold px-3 py-1 rounded-full uppercase shadow">Most Booked</span>
+                <img src="image/office.jpg" alt="Office Cleaning" class="w-full h-44 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Office Cleaning</h3>
+                <p class="text-gray-600 mb-4">Desks, floors, electronics & windows cleaned professionally.</p>
+                <a href="#" class="book-btn inline-block mt-2 px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-400 text-white rounded-lg font-semibold shadow hover:from-blue-800 hover:to-cyan-600 transition">Book Now</a>
+            </div>
+            <!-- Home Cleaning -->
+            <div class="service-card relative bg-white rounded-xl shadow-lg p-6 text-center opacity-0 translate-y-5 transition-all duration-400">
+                <span class="badge absolute top-4 left-4 bg-yellow-400 text-gray-800 text-xs font-bold px-3 py-1 rounded-full uppercase shadow">Most Booked</span>
+                <img src="image/home2.jpg" alt="Home Cleaning" class="w-full h-44 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Home Cleaning</h3>
+                <p class="text-gray-600 mb-4">Complete home cleaning with eco-friendly products.</p>
+                <a href="#" class="book-btn inline-block mt-2 px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-400 text-white rounded-lg font-semibold shadow hover:from-blue-800 hover:to-cyan-600 transition">Book Now</a>
+            </div>
+            <!-- Glass Cleaning -->
+            <div class="service-card relative bg-white rounded-xl shadow-lg p-6 text-center opacity-0 translate-y-5 transition-all duration-400">
+                <span class="badge absolute top-4 left-4 bg-yellow-400 text-gray-800 text-xs font-bold px-3 py-1 rounded-full uppercase shadow">Most Booked</span>
+                <img src="image/Glass.jpg" alt="Glass Cleaning" class="w-full h-44 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Glass Cleaning</h3>
+                <p class="text-gray-600 mb-4">Crystal clear windows and glass panels, streak-free.</p>
+                <a href="#" class="book-btn inline-block mt-2 px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-400 text-white rounded-lg font-semibold shadow hover:from-blue-800 hover:to-cyan-600 transition">Book Now</a>
+            </div>
+            <!-- Airbnb Cleaning -->
+            <div class="service-card relative bg-white rounded-xl shadow-lg p-6 text-center opacity-0 translate-y-5 transition-all duration-400">
+                <span class="badge absolute top-4 left-4 bg-yellow-400 text-gray-800 text-xs font-bold px-3 py-1 rounded-full uppercase shadow">Most Booked</span>
+                <img src="image/floor.jpg" alt="Airbnb Cleaning" class="w-full h-44 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Airbnb Cleaning</h3>
+                <p class="text-gray-600 mb-4">Fast turnaround and spotless cleaning for guests.</p>
+                <a href="#" class="book-btn inline-block mt-2 px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-400 text-white rounded-lg font-semibold shadow hover:from-blue-800 hover:to-cyan-600 transition">Book Now</a>
+            </div>
+            <!-- Mould Removal -->
+            <div class="service-card relative bg-white rounded-xl shadow-lg p-6 text-center opacity-0 translate-y-5 transition-all duration-400">
+                <span class="badge absolute top-4 left-4 bg-yellow-400 text-gray-800 text-xs font-bold px-3 py-1 rounded-full uppercase shadow">Most Booked</span>
+                <img src="image/mouldClean.jpg" alt="Mould Removal" class="w-full h-44 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Mould Removal</h3>
+                <p class="text-gray-600 mb-4">Safe and effective mould cleaning from walls & surfaces.</p>
+                <a href="#" class="book-btn inline-block mt-2 px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-400 text-white rounded-lg font-semibold shadow hover:from-blue-800 hover:to-cyan-600 transition">Book Now</a>
+            </div>
+            <!-- End-of-Tenancy Clean -->
+            <div class="service-card relative bg-white rounded-xl shadow-lg p-6 text-center opacity-0 translate-y-5 transition-all duration-400">
+                <span class="badge absolute top-4 left-4 bg-yellow-400 text-gray-800 text-xs font-bold px-3 py-1 rounded-full uppercase shadow">Most Booked</span>
+                <img src="image/home.jpg" alt="End of Tenancy Clean" class="w-full h-44 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Deep End-of-Tenancy Cleans</h3>
+                <p class="text-gray-600 mb-4">Restore rental spaces to pristine condition before move-out.</p>
+                <a href="#" class="book-btn inline-block mt-2 px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-400 text-white rounded-lg font-semibold shadow hover:from-blue-800 hover:to-cyan-600 transition">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <div class="section-title bg-white/10 py-8 text-center my-20 rounded-3xl border border-white/10">
+        <span class="block text-cyan-400 font-extrabold tracking-widest uppercase mb-2">How It Works</span>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900">Our Simple 3-Step Process</h1>
+    </div>
+    <div class="how-it-works grid grid-cols-1 md:grid-cols-3 gap-10 px-4 py-12 bg-white/80 rounded-3xl mx-auto border border-white/10 mb-16">
+        <div class="step bg-white rounded-2xl p-10 text-center shadow backdrop-blur-[25px] transition hover:-translate-y-4 hover:shadow-xl duration-500 relative before:content-[''] hover:before:w-full  before:left-0 before:top-0 before:right-0 before:absolute before:h-[4px] before:bg-gradient-r before:from-[#667eea] before:bg-gray-900 before:to-[#764ba2] before:scale-x-0 before:transition-all before:duration-[500ms] hover:before:scale-110 relative overflow-hidden border border-white/30">
+            <div class="step-icon w-28 h-28 rounded-full bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center mx-auto mb-8 shadow-lg transition hover:scale-110 hover:rotate-6">
+                <i class="fas fa-phone-alt text-white text-4xl"></i>
+            </div>
+            <h2 class="text-lg font-extrabold text-gray-800 mb-3">Contact Us</h2>
+            <p class="text-gray-600">Reach out to us via phone or email to discuss your cleaning needs. Our friendly team is here to assist you with any questions and provide a free quote.</p>
+        </div>
+        <div class="step bg-white rounded-2xl p-10 text-center shadow transition hover:-translate-y-4 hover:shadow-xl relative overflow-hidden border border-white/30">
+            <div class="step-icon w-28 h-28 rounded-full bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center mx-auto mb-8 shadow-lg transition hover:scale-110 hover:rotate-6">
+                <i class="fas fa-calendar-check text-white text-4xl"></i>
+            </div>
+            <h2 class="text-lg font-extrabold text-gray-800 mb-3">Schedule a Service</h2>
+            <p class="text-gray-600">Choose a convenient time for your cleaning service. We offer flexible scheduling to fit your busy lifestyle, ensuring minimal disruption to your routine.</p>
+        </div>
+        <div class="step bg-white rounded-2xl p-10 text-center shadow transition hover:-translate-y-4 hover:shadow-xl relative overflow-hidden border border-white/30">
+            <div class="step-icon w-28 h-28 rounded-full bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center mx-auto mb-8 shadow-lg transition hover:scale-110 hover:rotate-6">
+                <i class="fas fa-broom text-white text-4xl"></i>
+            </div>
+            <h2 class="text-lg font-extrabold text-gray-800 mb-3">Enjoy a Clean Space</h2>
+            <p class="text-gray-600">Relax and enjoy your freshly cleaned space. Our professional team will leave your home or office spotless, allowing you to focus on what matters most.</p>
+        </div>
+    </div>
+
+    <div class="swiper testimonial-swiper w-full max-w-[1100px] my-10 mx-auto pb-8 bg-transparent" aria-label="Client testimonials carousel">
+    <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide flex justify-center items-center bg-none">
+            <div class="testimonial-card bg-white rounded-[18px] shadow-[0_4px_24px_rgba(30,144,255,0.10)] px-6 pt-8 pb-6 text-center max-w-[340px] w-full mx-auto flex flex-col items-center transition-transform duration-200 hover:-translate-y-[6px] hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(30,144,255,0.16)]">
+                <img class="w-20 h-20 object-cover rounded-full mb-[1.1rem] border-[3px] border-[#1e90ff22] shadow-[0_2px_8px_rgba(30,144,255,0.08)]"
+                    src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=256&h=256&facepad=2" alt="Client portrait" loading="lazy">
+                <p class="italic text-[#444] mb-[0.7rem] text-[1.05rem]">"Very professional service—my home has never looked better!"</p>
+                <h4 class="text-[#1e90ff] text-[1.05rem] font-semibold">- Sarah J.</h4>
+                <div class="rating flex items-center justify-center gap-[0.15rem] mt-2" data-rating="5">
+                    <i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i>
+                    <span class="rating-value ml-[0.4rem] text-[#1e90ff] font-semibold text-base">5.0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide flex justify-center items-center bg-none">
+            <div class="testimonial-card bg-white rounded-[18px] shadow-[0_4px_24px_rgba(30,144,255,0.10)] px-6 pt-8 pb-6 text-center max-w-[340px] w-full mx-auto flex flex-col items-center transition-transform duration-200 hover:-translate-y-[6px] hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(30,144,255,0.16)]">
+                <img class="w-20 h-20 object-cover rounded-full mb-[1.1rem] border-[3px] border-[#1e90ff22] shadow-[0_2px_8px_rgba(30,144,255,0.08)]"
+                    src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=256&h=256&facepad=2" alt="Client portrait" loading="lazy">
+                <p class="italic text-[#444] mb-[0.7rem] text-[1.05rem]">"Quick, reliable, and friendly staff. Highly recommend for office cleaning!"</p>
+                <h4 class="text-[#1e90ff] text-[1.05rem] font-semibold">- Mark T.</h4>
+                <div class="rating flex items-center justify-center gap-[0.15rem] mt-2" data-rating="5">
+                    <i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i>
+                    <span class="rating-value ml-[0.4rem] text-[#1e90ff] font-semibold text-base">5.0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide flex justify-center items-center bg-none">
+            <div class="testimonial-card bg-white rounded-[18px] shadow-[0_4px_24px_rgba(30,144,255,0.10)] px-6 pt-8 pb-6 text-center max-w-[340px] w-full mx-auto flex flex-col items-center transition-transform duration-200 hover:-translate-y-[6px] hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(30,144,255,0.16)]">
+                <img class="w-20 h-20 object-cover rounded-full mb-[1.1rem] border-[3px] border-[#1e90ff22] shadow-[0_2px_8px_rgba(30,144,255,0.08)]"
+                    src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=256&h=256&facepad=2" alt="Client portrait" loading="lazy">
+                <p class="italic text-[#444] mb-[0.7rem] text-[1.05rem]">"Booked for my Airbnb—guests always comment on the spotless space."</p>
+                <h4 class="text-[#1e90ff] text-[1.05rem] font-semibold">- Priya K.</h4>
+                <div class="rating flex items-center justify-center gap-[0.15rem] mt-2" data-rating="5">
+                    <i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i>
+                    <span class="rating-value ml-[0.4rem] text-[#1e90ff] font-semibold text-base">5.0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide flex justify-center items-center bg-none">
+            <div class="testimonial-card bg-white rounded-[18px] shadow-[0_4px_24px_rgba(30,144,255,0.10)] px-6 pt-8 pb-6 text-center max-w-[340px] w-full mx-auto flex flex-col items-center transition-transform duration-200 hover:-translate-y-[6px] hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(30,144,255,0.16)]">
+                <img class="w-20 h-20 object-cover rounded-full mb-[1.1rem] border-[3px] border-[#1e90ff22] shadow-[0_2px_8px_rgba(30,144,255,0.08)]"
+                    src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=256&h=256&facepad=2" alt="Client portrait" loading="lazy">
+                <p class="italic text-[#444] mb-[0.7rem] text-[1.05rem]">"The attention to detail was amazing. My office looks brand new!"</p>
+                <h4 class="text-[#1e90ff] text-[1.05rem] font-semibold">- Emily R.</h4>
+                <div class="rating flex items-center justify-center gap-[0.15rem] mt-2" data-rating="5">
+                    <i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i>
+                    <span class="rating-value ml-[0.4rem] text-[#1e90ff] font-semibold text-base">5.0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide flex justify-center items-center bg-none">
+            <div class="testimonial-card bg-white rounded-[18px] shadow-[0_4px_24px_rgba(30,144,255,0.10)] px-6 pt-8 pb-6 text-center max-w-[340px] w-full mx-auto flex flex-col items-center transition-transform duration-200 hover:-translate-y-[6px] hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(30,144,255,0.16)]">
+                <img class="w-20 h-20 object-cover rounded-full mb-[1.1rem] border-[3px] border-[#1e90ff22] shadow-[0_2px_8px_rgba(30,144,255,0.08)]"
+                    src="https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=facearea&w=256&h=256&facepad=2" alt="Client portrait" loading="lazy">
+                <p class="italic text-[#444] mb-[0.7rem] text-[1.05rem]">"Super easy to book and the results exceeded my expectations."</p>
+                <h4 class="text-[#1e90ff] text-[1.05rem] font-semibold">- John D.</h4>
+                <div class="rating flex items-center justify-center gap-[0.15rem] mt-2" data-rating="5">
+                    <i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i>
+                    <span class="rating-value ml-[0.4rem] text-[#1e90ff] font-semibold text-base">5.0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide flex justify-center items-center bg-none">
+            <div class="testimonial-card bg-white rounded-[18px] shadow-[0_4px_24px_rgba(30,144,255,0.10)] px-6 pt-8 pb-6 text-center max-w-[340px] w-full mx-auto flex flex-col items-center transition-transform duration-200 hover:-translate-y-[6px] hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(30,144,255,0.16)]">
+                <img class="w-20 h-20 object-cover rounded-full mb-[1.1rem] border-[3px] border-[#1e90ff22] shadow-[0_2px_8px_rgba(30,144,255,0.08)]"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&w=256&h=256&facepad=2" alt="Client portrait" loading="lazy">
+                <p class="italic text-[#444] mb-[0.7rem] text-[1.05rem]">"Friendly team, fast service, and my home smells so fresh now!"</p>
+                <h4 class="text-[#1e90ff] text-[1.05rem] font-semibold">- Linda S.</h4>
+                <div class="rating flex items-center justify-center gap-[0.15rem] mt-2" data-rating="5">
+                    <i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i><i class="fas fa-star text-[#ffb400] text-[1.1rem]"></i>
+                    <span class="rating-value ml-[0.4rem] text-[#1e90ff] font-semibold text-base">5.0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="swiper-pagination [--swiper-pagination-bullet-inactive-color:#1e90ff] [--swiper-pagination-bullet-active-color:#ffb400]"></div>
+    <div class="swiper-button-prev text-[#1e90ff]"></div>
+    <div class="swiper-button-next text-[#1e90ff]"></div>
+</div>
+
+
+    <!-- CTA SECTION -->
+   <section class="cta-section bg-gradient-to-r from-blue-600 to-cyan-400 text-white text-center py-10 px-4 rounded-xl max-w-6xl mx-auto my-10 shadow-lg">
+    <h2 class="text-2xl md:text-3xl font-bold mb-2">Ready for a Spotless Experience?</h2>
+    <p class="text-lg mb-4">Book your cleaning or laundry service today and enjoy peace of mind!</p>
+    <a href="#booking" class="cta-btn bg-white text-blue-600 px-8 py-3 rounded-full font-semibold shadow hover:bg-yellow-400 hover:text-white transition mr-2">Book Now</a>
+    <a href="#contact" class="cta-btn bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition">Contact Us</a>
+</section>
+
+
+    <!-- FAQ SECTION -->
+    <div class="faq-section bg-white/90 backdrop-blur-lg rounded-3xl p-10 my-16 max-w-2xl mx-auto border border-white/30">
+        <h2 class="text-center text-blue-600 text-3xl font-extrabold mb-8">Frequently Asked Questions</h2>
+        <div class="faq-item mb-6 p-6 bg-blue-100/30 rounded-xl border-l-4 border-blue-500 transition hover:bg-blue-100/60 hover:translate-x-4 hover:shadow-lg cursor-pointer">
+            <h3 class="text-blue-600 font-bold text-lg mb-2 flex justify-between items-center">What areas do you service? <span class="faq-toggle ml-2"><i class="fas fa-chevron-down"></i></span></h3>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500">
+                <p class="text-gray-700">We provide cleaning services across the city and surrounding suburbs. Contact us to check if we service your area.</p>
+            </div>
+        </div>
+        <div class="faq-item mb-6 p-6 bg-blue-100/30 rounded-xl border-l-4 border-blue-500 transition hover:bg-blue-100/60 hover:translate-x-4 hover:shadow-lg cursor-pointer">
+            <h3 class="text-blue-600 font-bold text-lg mb-2 flex justify-between items-center">Do you use eco-friendly products? <span class="faq-toggle ml-2"><i class="fas fa-chevron-down"></i></span></h3>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500">
+                <p class="text-gray-700">Yes, we prioritize the use of eco-friendly cleaning products to ensure a safe and healthy environment for you and your family.</p>
+            </div>
+        </div>
+        <div class="faq-item mb-6 p-6 bg-blue-100/30 rounded-xl border-l-4 border-blue-500 transition hover:bg-blue-100/60 hover:translate-x-4 hover:shadow-lg cursor-pointer">
+            <h3 class="text-blue-600 font-bold text-lg mb-2 flex justify-between items-center">How do I book a service? <span class="faq-toggle ml-2"><i class="fas fa-chevron-down"></i></span></h3>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500">
+                <p class="text-gray-700">You can book a service by contacting us via phone or email, or by filling out our online booking form. We will confirm your appointment and provide a quote.</p>
+            </div>
+        </div>
+        <div class="faq-item mb-6 p-6 bg-blue-100/30 rounded-xl border-l-4 border-blue-500 transition hover:bg-blue-100/60 hover:translate-x-4 hover:shadow-lg cursor-pointer">
+            <h3 class="text-blue-600 font-bold text-lg mb-2 flex justify-between items-center">What if I need to reschedule? <span class="faq-toggle ml-2"><i class="fas fa-chevron-down"></i></span></h3>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500">
+                <p class="text-gray-700">If you need to reschedule, please contact us at least 24 hours in advance. We will do our best to accommodate your new schedule.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRUST BADGES -->
+    <section class="trust-badges text-center my-10">
+        <h2 class="text-blue-600 text-2xl font-bold mb-4">Trusted By</h2>
+        <div class="flex justify-center gap-8 flex-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Trustpilot_logo.png" alt="Trustpilot" class="h-10 opacity-80 hover:opacity-100 transition" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Googlelogo.png" alt="Google" class="h-10 opacity-80 hover:opacity-100 transition" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Facebook_Logo_2023.png" alt="Facebook" class="h-10 opacity-80 hover:opacity-100 transition" />
+        </div>
+    </section>
+
+    <script>
+        // Swiper initialization
+        new Swiper('.testimonial-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoHeight: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            breakpoints: {
+                700: { slidesPerView: 2, centeredSlides: true },
+                1100: { slidesPerView: 3, centeredSlides: true }
+            },
+            on: {
+                init: function () {
+                    const swiperEl = document.querySelector('.testimonial-swiper');
+                    swiperEl.addEventListener('mouseenter', () => this.autoplay.stop());
+                    swiperEl.addEventListener('mouseleave', () => this.autoplay.start());
+                }
+            }
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.querySelector('h3').onclick = function () {
+                item.classList.toggle('open');
+                let answer = item.querySelector('.faq-answer');
+                if (item.classList.contains('open')) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    answer.style.maxHeight = null;
+                }
+            };
+        });
+
+        // Service card animation on load
+        document.querySelectorAll('.service-card').forEach((card, i) => {
+            setTimeout(() => {
+                card.classList.add('opacity-100', 'translate-y-0');
+                card.classList.remove('opacity-0', 'translate-y-5');
+            }, 100 + i * 120);
+        });
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const serviceCards = document.querySelectorAll('.service-card');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                filterButtons.forEach(btn => btn.classList.remove('active', 'bg-[#003d66]'));
+                button.classList.add('active', 'bg-[#003d66]');
+                serviceCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                        setTimeout(() => card.classList.add('opacity-100', 'translate-y-0'), 100);
+                    } else {
+                        card.classList.remove('opacity-100', 'translate-y-0');
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        // Initial display of all service cards
+        serviceCards.forEach(card => {
+            card.style.display = 'block';
+            setTimeout(() => card.classList.add('opacity-100', 'translate-y-0'), 100);
+        });
+    </script>
+</body>
+</html>
