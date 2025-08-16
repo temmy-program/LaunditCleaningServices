@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CleanCo Laundry | Home</title>
+    <link rel="stylesheet" href="Service.css" />
+    <link rel="stylesheet" href="work.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="render.css">
+    <!-- <link rel="stylesheet" href="ser.css"> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">CleanCo</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Book Now</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- THE NAVIGATION BAR- HERO  -->
+    <section class="hero">
+        <p class="breadcrumbs mb-0">
+            <span class="mr-2"><a href="#">Home <i class="fa fa-chevron-right"></i></a></span>
+            <span>Services <span class="right"><i class="fa fa-chevron-right"></span></i></span>
+        </p>
+        <h1>Services</h1>
+        <a href="#" class="btn">Schedule Pickup</a>
+    </section>
+
+    <div class="section-title">
+        <span>SERVICES</span>
+        <h1>How It Works</h1>
+    </div>
+    <section class="how-it-works">
+        <div class="step">
+            <div class="me">
+                <i class="fas fa-calendar-check fa-3x"></i>
+            </div>
+            <h2>Make Schedule</h2>
+            <p>Choose a pickup time that works best for you and we’ll handle the rest.</p>
+        </div>
+
+        <div class="step">
+            <div class="me">
+                <i class="fas fa-comments fa-3x"></i>
+            </div>
+            <h2>Start Discussion</h2>
+            <p>Chat with us about your laundry preferences or any special requests.</p>
+        </div>
+
+        <div class="step">
+            <div class="me">
+                <i class="fas fa-tshirt fa-3x"></i>
+            </div>
+            <h2>Enjoy Clean Clothes</h2>
+            <p>Relax while we wash, dry, and deliver your laundry back fresh and clean.</p>
+        </div>
+    </section>
+
+    <section class="service-container">
+        <div class="service-header">
+            <h2>Our Premium Cleaning Services</h2>
+            <p>Choose a service that fits your needs. Professional, quick, and affordable — tailored for homes, offices,
+                and rental spaces.</p>
+        </div>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="office">Office</button>
+            <button class="filter-btn" data-category="home">Home</button>
+            <button class="filter-btn" data-category="glass">Glass</button>
+            <button class="filter-btn" data-category="airbnb">Airbnb</button>
+            <button class="filter-btn" data-category="mould">Mould</button>
+            <button class="filter-btn" data-category="tenancy">Tenancy</button>
+        </div>
+
+        <div class="service-grid">
+
+            <!-- Office Cleaning -->
+            <div class="service-card" data-category="office">
+                <span class="badge">Most Booked</span>
+                <img src="image/office.jpg" alt="Office Cleaning">
+                <h3>Office Cleaning</h3>
+                <p>Desks, floors, electronics & windows cleaned professionally.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- Home Cleaning -->
+            <div class="service-card" data-category="home">
+                <span class="badge">Most Booked</span>
+                <img src="image/home2.jpg" alt="Home Cleaning">
+                <h3>Home Cleaning</h3>
+                <p>Complete home cleaning with eco-friendly products.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- Glass Cleaning -->
+            <div class="service-card" data-category="glass">
+                <span class="badge">Most Booked</span>
+                <img src="image/Glass.jpg" alt="Glass Cleaning">
+                <h3>Glass Cleaning</h3>
+                <p>Crystal clear windows and glass panels, streak-free.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- Airbnb Cleaning -->
+            <div class="service-card" data-category="airbnb">
+                <span class="badge">Most Booked</span>
+                <img src="image/floor.jpg" alt="Airbnb Cleaning">
+                <h3>Airbnb Cleaning</h3>
+                <p>Fast turnaround and spotless cleaning for guests.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- Mould Removal -->
+            <div class="service-card" data-category="mould">
+                <span class="badge">Most Booked</span>
+                <img src="image/mouldClean.jpg" alt="Mould Removal">
+                <h3>Mould Removal</h3>
+                <p>Safe and effective mould cleaning from walls & surfaces.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- End-of-Tenancy Clean -->
+            <div class="service-card" data-category="tenancy">
+                <span class="badge">Most Booked</span>
+                <img src="image/home.jpg" alt="End of Tenancy Clean">
+                <h3>Deep End-of-Tenancy Cleans</h3>
+                <p>Restore rental spaces to pristine condition before move-out.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="ser.js"></script>
+    
+
+    <footer>
+        <p>&copy; 2025 CleanCo Laundry. All rights reserved.</p>
+    </footer>
+    <script src="img.js"></script>
+</body>
+
+</html>

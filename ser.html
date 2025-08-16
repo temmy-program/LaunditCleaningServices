@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ser.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+        .Text_container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero_image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .hero_image img {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+            border-radius: 10px;
+            animation: bounce 2s infinite alternate-reverse;
+        }
+        @keyframes bounce {
+            from {
+                transform: translateY(0px);
+            }
+            to {
+                transform: translateY(50px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+        <!-- THE NAVIGATION BAR- HERO  -->
+    <section class="hero">
+        <div class="breadcrumbs mb-0">
+            <div class="Text_container"> 
+                <h1>what your mates are doing follow them do</h1>
+                <p></p>
+                <h2>Services</h2>
+                <a href="#" class="btn">Schedule Pickup</a>
+            </div>
+            <div class="hero_image">
+                <img src="" alt="">
+            </div>
+            <!-- <span class="mr-2"><a href="#">Home <i class="fa fa-chevron-right"></i></a></span>
+            <span>Services <span class="right"><i class="fa fa-chevron-right"></span></i></span> -->
+        </div>
+    </section>
+    <section class="service-container">
+        <div class="service-header">
+            <h2>Our Premium Cleaning Services</h2>
+            <p>Choose a service that fits your needs. Professional, quick, and affordable — tailored for homes, offices,
+                and rental spaces.</p>
+        </div>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="office">Office</button>
+            <button class="filter-btn" data-category="home">Home</button>
+            <button class="filter-btn" data-category="glass">Glass</button>
+            <button class="filter-btn" data-category="airbnb">Airbnb</button>
+            <button class="filter-btn" data-category="mould">Mould</button>
+            <button class="filter-btn" data-category="tenancy">Tenancy</button>
+        </div>
+
+        <div class="service-grid">
+
+            <!-- Office Cleaning -->
+            <div class="service-card" data-category="office">
+                <span class="badge">Most Booked</span>
+                <img src="image/office.jpg" alt="Office Cleaning">
+                <h3>Office Cleaning</h3>
+                <p>Desks, floors, electronics & windows cleaned professionally.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- Home Cleaning -->
+            <div class="service-card" data-category="home">
+                <span class="badge">Most Booked</span>
+                <img src="image/home2.jpg" alt="Home Cleaning">
+                <h3>Home Cleaning</h3>
+                <p>Complete home cleaning with eco-friendly products.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- Glass Cleaning -->
+            <div class="service-card" data-category="glass">
+                <span class="badge">Most Booked</span>
+                <img src="image/Glass.jpg" alt="Glass Cleaning">
+                <h3>Glass Cleaning</h3>
+                <p>Crystal clear windows and glass panels, streak-free.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- Airbnb Cleaning -->
+            <div class="service-card" data-category="airbnb">
+                <span class="badge">Most Booked</span>
+                <img src="image/floor.jpg" alt="Airbnb Cleaning">
+                <h3>Airbnb Cleaning</h3>
+                <p>Fast turnaround and spotless cleaning for guests.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- Mould Removal -->
+            <div class="service-card" data-category="mould">
+                <span class="badge">Most Booked</span>
+                <img src="image/mouldClean.jpg" alt="Mould Removal">
+                <h3>Mould Removal</h3>
+                <p>Safe and effective mould cleaning from walls & surfaces.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- End-of-Tenancy Clean -->
+            <div class="service-card" data-category="tenancy">
+                <span class="badge">Most Booked</span>
+                <img src="image/home.jpg" alt="End of Tenancy Clean">
+                <h3>Deep End-of-Tenancy Cleans</h3>
+                <p>Restore rental spaces to pristine condition before move-out.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- Section Title -->
+        <div class="section-title">
+            <span>How It Works</span>
+            <h1>Our Simple 3-Step Process</h1>
+        </div>
+    <!-- How It Works Section -->
+        <div class="how-it-works">
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h2>Contact Us</h2>
+                <p>Reach out to us via phone or email to discuss your cleaning needs. Our friendly team is here to
+                    assist you with any questions and provide a free quote.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h2>Schedule a Service</h2>
+                <p>Choose a convenient time for your cleaning service. We offer flexible scheduling to fit
+                    your busy lifestyle, ensuring minimal disruption to your routine.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-broom"></i>
+                </div>
+                <h2>Enjoy a Clean Space</h2>
+                <p>Relax and enjoy your freshly cleaned space. Our professional team will leave your home or office
+                    spotless, allowing you to focus on what matters most.</p>
+            </div>
+        </div>
+
+
+    <div class="swiper testimonial-swiper" aria-label="Client testimonials carousel">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide testimonial-card">
+                <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=256&h=256&facepad=2"
+                    alt="Client portrait" loading="lazy">
+                <p>"Very professional service—my home has never looked better!"</p>
+                <h4>- Sarah J.</h4>
+                <div class="rating" data-rating="5">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="rating-value">5.0</span>
+                </div>
+                <button class="like-btn"><i class="fas fa-thumbs-up"></i> <span class="like-count">0</span></button>
+                <button class="share-btn"><i class="fas fa-share"></i> Share</button>
+            </div>
+            <div class="swiper-slide testimonial-card">
+                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=256&h=256&facepad=2"
+                    alt="Client portrait" loading="lazy">
+                <p>"Quick, reliable, and friendly staff. Highly recommend for office cleaning!"</p>
+                <h4>- Mark T.</h4>
+                <div class="rating" data-rating="5">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="rating-value">5.0</span>
+                </div>
+                <button class="like-btn"><i class="fas fa-thumbs-up"></i> <span class="like-count">0</span></button>
+                <button class="share-btn"><i class="fas fa-share"></i> Share</button>
+            </div>
+            <div class="swiper-slide testimonial-card">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=256&h=256&facepad=2"
+                    alt="Client portrait" loading="lazy">
+                <p>"Booked for my Airbnb—guests always comment on the spotless space."</p>
+                <h4>- Priya K.</h4>
+                <div class="rating" data-rating="5">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="rating-value">5.0</span>
+                </div>
+                <button class="like-btn"><i class="fas fa-thumbs-up"></i> <span class="like-count">0</span></button>
+                <button class="share-btn"><i class="fas fa-share"></i> Share</button>
+            </div>
+            <div class="swiper-slide testimonial-card">
+                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=256&h=256&facepad=2"
+                    alt="Client portrait" loading="lazy">
+                <p>"The attention to detail was amazing. My office looks brand new!"</p>
+                <h4>- Emily R.</h4>
+                <div class="rating" data-rating="5">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="rating-value">5.0</span>
+                </div>
+                <button class="like-btn"><i class="fas fa-thumbs-up"></i> <span class="like-count">0</span></button>
+                <button class="share-btn"><i class="fas fa-share"></i> Share</button>
+            </div>
+            <div class="swiper-slide testimonial-card">
+                <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=facearea&w=256&h=256&facepad=2"
+                    alt="Client portrait" loading="lazy">
+                <p>"Super easy to book and the results exceeded my expectations."</p>
+                <h4>- John D.</h4>
+                <div class="rating" data-rating="5">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="rating-value">5.0</span>
+                </div>
+                <button class="like-btn"><i class="fas fa-thumbs-up"></i> <span class="like-count">0</span></button>
+                <button class="share-btn"><i class="fas fa-share"></i> Share</button>
+            </div>
+            <div class="swiper-slide testimonial-card">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&w=256&h=256&facepad=2"
+                    alt="Client portrait" loading="lazy">
+                <p>"Friendly team, fast service, and my home smells so fresh now!"</p>
+                <h4>- Linda S.</h4>
+                <div class="rating" data-rating="5">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="rating-value">5.0</span>
+                </div>
+                <button class="like-btn"><i class="fas fa-thumbs-up"></i> <span class="like-count">0</span></button>
+                <button class="share-btn"><i class="fas fa-share"></i> Share</button>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    </div>
+
+    <!-- Place after the testimonials Swiper -->
+    <section class="cta-section">
+        <h2>Ready for a Spotless Experience?</h2>
+        <p>Book your cleaning or laundry service today and enjoy peace of mind!</p>
+        <a href="#booking" class="cta-btn">Book Now</a>
+        <a href="#contact" class="cta-btn secondary">Contact Us</a>
+    </section>
+
+     <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What areas do you service? <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span></h3>
+                <div class="faq-answer">
+                    <p>We provide cleaning services across the city and surrounding suburbs. Contact us to check if we
+                        service your area.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>Do you use eco-friendly products? <span class="faq-toggle"><i
+                            class="fas fa-chevron-down"></i></span></h3>
+                <div class="faq-answer">
+                    <p>Yes, we prioritize the use of eco-friendly cleaning products to ensure a safe and healthy
+                        environment for you and your family.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>How do I book a service? <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span></h3>
+                <div class="faq-answer">
+                    <p>You can book a service by contacting us via phone or email, or by filling out our online booking
+                        form. We will confirm your appointment and provide a quote.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>What if I need to reschedule? <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </h3>
+                <div class="faq-answer">
+                    <p>If you need to reschedule, please contact us at least 24 hours in advance. We will do our best to
+                        accommodate your new schedule.</p>
+                </div>
+            </div>
+        </div>
+
+<section class="trust-badges">
+    <h2>Trusted By</h2>
+    <div class="badges">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Trustpilot_logo.png" alt="Trustpilot" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Googlelogo.png" alt="Google" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Facebook_Logo_2023.png" alt="Facebook" />
+        <!-- Add more as needed -->
+    </div>
+</section>
+    <script>
+        new Swiper('.testimonial-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoHeight: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            breakpoints: {
+                700: { slidesPerView: 2, centeredSlides: true },
+                1100: { slidesPerView: 3, centeredSlides: true }
+            },
+            on: {
+                init: function () {
+                    const swiperEl = document.querySelector('.testimonial-swiper');
+                    swiperEl.addEventListener('mouseenter', () => this.autoplay.stop());
+                    swiperEl.addEventListener('mouseleave', () => this.autoplay.start());
+                }
+            }
+        });
+    </script>
+    <script src="ser.js"></script>
+    <script src="img.js"></script>
+</body>
+
+</html>
