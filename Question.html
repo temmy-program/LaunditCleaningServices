@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Cleaning Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .faq-item .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-toggle {
+            float: right;
+            font-size: 1rem;
+            color: #667eea;
+            cursor: pointer;
+        }
+        .faq-section {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(25px);
+            border-radius: 30px;
+            padding: 4rem;
+            margin: 5rem auto;
+            max-width: 900px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-weight: 900;
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: rgba(102, 126, 234, 0.08);
+            border-radius: 20px;
+            border-left: 5px solid #667eea;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .faq-item:hover {
+            background: rgba(102, 126, 234, 0.15);
+            transform: translateX(15px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .faq-item p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Trust badges */
+        .trust-badges {
+            text-align: center;
+            margin: 5rem auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .trust-badges h2 {
+            color: #fff;
+            margin-bottom: 3rem;
+            font-size: 2.3rem;
+            font-weight: 900;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .badges img {
+            height: 60px;
+            opacity: 0.8;
+            transition: all 0.4s ease;
+            filter: brightness(0) invert(1);
+        }
+
+        .badges img:hover {
+            opacity: 1;
+            transform: scale(1.15);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>What areas do you service? <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span></h3>
+            <div class="faq-answer">
+                <p>We provide cleaning services across the city and surrounding suburbs. Contact us to check if we service your area.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>Do you use eco-friendly products? <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span></h3>
+            <div class="faq-answer">
+                <p>Yes, we prioritize the use of eco-friendly cleaning products to ensure a safe and healthy environment for you and your family.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>How do I book a service? <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span></h3>
+            <div class="faq-answer">
+                <p>You can book a service by contacting us via phone or email, or by filling out our online booking form. We will confirm your appointment and provide a quote.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>What if I need to reschedule? <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span></h3>
+            <div class="faq-answer">
+                <p>If you need to reschedule, please contact us at least 24 hours in advance. We will do our best to accommodate your new schedule.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.querySelector('h3').onclick = function () {
+                item.classList.toggle('open');
+                let answer = item.querySelector('.faq-answer');
+                if (item.classList.contains('open')) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    answer.style.maxHeight = null;
+                }
+            };
+        });
+    </script>
+</body>
+</html>

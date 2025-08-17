@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Cleaning Services</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated background elements */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .floating-shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .floating-shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-shape:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 70%;
+            right: 10%;
+            animation-delay: 3s;
+        }
+
+        .floating-shape:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            top: 40%;
+            left: 80%;
+            animation-delay: 6s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            33% {
+                transform: translateY(-30px) rotate(120deg);
+            }
+
+            66% {
+                transform: translateY(20px) rotate(240deg);
+            }
+        }
+
+        .service-container {
+            padding: 4rem 1.5rem;
+            max-width: 1400px;
+            margin: auto;
+            position: relative;
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #fff;
+            padding: 0 1rem;
+        }
+
+        .service-header h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #fff 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
+            }
+
+            to {
+                filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.6));
+            }
+        }
+
+        .service-header p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .filter-btn:hover::before {
+            left: 100%;
+        }
+
+        .filter-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            border-color: #00d4ff;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            opacity: 0;
+            transform: translateY(50px) rotateX(10deg);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #00d4ff);
+            background-size: 200% 100%;
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        .service-card.show {
+            opacity: 1;
+            transform: translateY(0) rotateX(0deg);
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .book-btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .book-btn:hover::before {
+            left: 100%;
+        }
+
+        .book-btn:hover {
+            background: linear-gradient(135deg, #764ba2, #667eea);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 8px 16px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .section-title {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem 0;
+            text-align: center;
+            margin: 4rem 0 2rem 0;
+            border-radius: 24px;
+        }
+
+        .section-title span {
+            display: block;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #00d4ff;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .how-it-works {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 3rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            margin: 2rem 0;
+        }
+
+        .step {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .step:hover::before {
+            transform: scaleX(1);
+        }
+
+        .step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .me {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .me i {
+            color: #fff;
+            font-size: 2.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .step:hover .me i {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .step h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .step p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Testimonials */
+        .testimonial-swiper {
+            margin: 4rem auto;
+            padding: 2rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 3px solid #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 24px;
+            margin: 4rem auto;
+            max-width: 800px;
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.9);
+            color: #667eea;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-btn:hover {
+            background: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 3rem;
+            margin: 4rem auto;
+            max-width: 800px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 16px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateX(10px);
+        }
+
+        .faq-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .faq-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            text-align: center;
+            margin: 4rem auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+
+        .trust-badges h2 {
+            color: #fff;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .badges img {
+            height: 50px;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            filter: brightness(0) invert(1);
+        }
+
+        .badges img:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-container {
+                padding: 2rem 1rem;
+            }
+
+            .service-header h2 {
+                font-size: 2.5rem;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .filter-buttons {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .how-it-works {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .cta-btn {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #764ba2, #667eea);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+    </div>
+
+    <section class="service-container">
+        <div class="service-header">
+            <h2>Premium Cleaning Services</h2>
+            <p>Transform your space with our professional cleaning solutions. From homes to offices, we deliver spotless
+                results with eco-friendly products and cutting-edge techniques.</p>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">All Services</button>
+            <button class="filter-btn" data-category="office">Office</button>
+            <button class="filter-btn" data-category="home">Home</button>
+            <button class="filter-btn" data-category="glass">Glass</button>
+            <button class="filter-btn" data-category="airbnb">Airbnb</button>
+            <button class="filter-btn" data-category="mould">Mould</button>
+            <button class="filter-btn" data-category="tenancy">Tenancy</button>
+        </div>
+
+        <div class="service-grid">
+            <!-- Office Cleaning -->
+            <div class="service-card" data-category="office">
+                <span class="badge">Most Popular</span>
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=500&h=300"
+                    alt="Office Cleaning">
+                <h3>Office Cleaning</h3>
+                <p>Comprehensive office cleaning including desks, floors, electronics, and windows. Create a productive
+                    workspace.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- Home Cleaning -->
+            <div class="service-card" data-category="home">
+                <span class="badge">Eco-Friendly</span>
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&h=300"
+                    alt="Home Cleaning">
+                <h3>Home Cleaning</h3>
+                <p>Complete home cleaning service using eco-friendly products safe for your family and pets.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- Glass Cleaning -->
+            <div class="service-card" data-category="glass">
+                <span class="badge">Streak-Free</span>
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=500&h=300"
+                    alt="Glass Cleaning">
+                <h3>Glass Cleaning</h3>
+                <p>Crystal clear windows and glass panels with our professional streak-free cleaning technique.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- Airbnb Cleaning -->
+            <div class="service-card" data-category="airbnb">
+                <span class="badge">Fast Turnaround</span>
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=500&h=300"
+                    alt="Airbnb Cleaning">
+                <h3>Airbnb Cleaning</h3>
+                <p>Quick turnaround cleaning service for rental properties. Ensure your guests have a spotless
+                    experience.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- Mould Removal -->
+            <div class="service-card" data-category="mould">
+                <span class="badge">Safe & Effective</span>
+                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=500&h=300"
+                    alt="Mould Removal">
+                <h3>Mould Removal</h3>
+                <p>Professional mould removal and prevention service to keep your space healthy and clean.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+
+            <!-- End-of-Tenancy Clean -->
+            <div class="service-card" data-category="tenancy">
+                <span class="badge">Deep Clean</span>
+                <img src="https://images.unsplash.com/photo-1527515862127-a4fc05baf7a5?auto=format&fit=crop&w=500&h=300"
+                    alt="End of Tenancy Clean">
+                <h3>End-of-Tenancy Clean</h3>
+                <p>Comprehensive deep cleaning to restore rental properties to pristine condition for move-out.</p>
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-title">
+        <span>PROCESS</span>
+        <h1>How It Works</h1>
+    </div>
+
+    <section class="how-it-works">
+        <div class="step">
+            <div class="me">
+                <i class="fas fa-calendar-check"></i>
+            </div>
+            <h2>Schedule Service</h2>
+            <p>Choose your preferred time and date. Our flexible scheduling works around your busy lifestyle.</p>
+        </div>
+
+        <div class="step">
+            <div class="me">
+                <i class="fas fa-comments"></i>
+            </div>
+            <h2>Discuss Requirements</h2>
+            <p>Tell us about your specific needs and any special requirements for your cleaning service.</p>
+        </div>
+
+        <div class="step">
+            <div class="me">
+                <i class="fas fa-spray-can"></i>
+            </div>
+            <h2>Professional Cleaning</h2>
+            <p>Our trained professionals arrive with all equipment and eco-friendly supplies ready to work.</p>
+        </div>
+
+        <div class="step">
+            <div class="me">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h2>Real-Time Updates</h2>
+            <p>Get live updates on your cleaning progress and estimated completion time via our app.</p>
+        </div>
+
+        <div class="step">
+            <div class="me">
+                <i class="fas fa-credit-card"></i>
+            </div>
+            <h2>Secure Payment</h2>
+            <p>Pay securely online after the job is completed to your satisfaction. No hidden fees.</p>
+        </div>
+
+        <div class="step">
+            <div class="me">
+                <i class="fas fa-star"></i>
+            </div>
+            <h2>Rate & Review</h2>
+            <p>Share your experience and help us maintain our high standards of service quality.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Swiper -->
+    <div class="swiper testimonial-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616c0763c70?auto=format&fit=facearea&w=256&h=256&facepad=2"
+                        alt="Sarah J." loading="lazy">
+                    <p>"Absolutely incredible service! My home has never looked this pristine. The attention to detail
+                        is remarkable."</p>
+                    <h4>- Sarah J.</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="rating-value">5.0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&w=256&h=256&facepad=2"
+                        alt="David L." loading="lazy">
+                    <p>"The mould removal service was exceptional. They handled everything professionally and my home
+                        feels fresh again."</p>
+                    <h4>- David L.</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="rating-value">5.0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=facearea&w=256&h=256&facepad=2"
+                        alt="Lisa K." loading="lazy">
+                    <p>"End-of-tenancy cleaning was perfect! Got my full deposit back thanks to their thorough deep
+                        cleaning service."</p>
+                    <h4>- Lisa K.</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="rating-value">5.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready for a Spotless Experience?</h2>
+        <p>Join thousands of satisfied customers who trust us with their cleaning needs. Book today and see the
+            difference!</p>
+        <a href="#booking" class="cta-btn">Book Your Service</a>
+        <a href="#contact" class="cta-btn">Get Free Quote</a>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>How do I book a cleaning service?</h3>
+                <p>Simply click "Book Now" on any service card, select your preferred date and time, and provide your
+                    details. We'll confirm your booking within minutes and send you all the necessary information.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What areas do you serve?</h3>
+                <p>We proudly serve all major neighborhoods throughout the city and surrounding areas. If you're unsure
+                    about coverage in your location, please contact us and we'll be happy to confirm availability.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Are your cleaning products safe and eco-friendly?</h3>
+                <p>Absolutely! We exclusively use eco-friendly, non-toxic cleaning products that are completely safe for
+                    children, pets, and the environment. Your family's health is our top priority.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I reschedule or cancel my booking?</h3>
+                <p>Yes, we understand plans change. You can reschedule or cancel your booking up to 24 hours in advance
+                    without any penalties. Just contact our customer service team or use our online portal.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you provide cleaning supplies and equipment?</h3>
+                <p>Yes! Our professional team arrives fully equipped with all necessary cleaning supplies, tools, and
+                    equipment. You don't need to worry about providing anything – we've got it all covered.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How long does a typical cleaning session take?</h3>
+                <p>Cleaning duration varies based on the size of your space and the type of service. Home cleaning
+                    typically takes 2-4 hours, while office cleaning can range from 1-6 hours depending on the area size
+                    and requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <h2>Trusted By Industry Leaders</h2>
+        <div class="badges">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Trustpilot_logo.png" alt="Trustpilot" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                alt="Facebook" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" />
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const serviceCards = document.querySelectorAll('.service-card');
+
+        function showCards(category) {
+            serviceCards.forEach((card, index) => {
+                card.classList.remove('show');
+
+                if (category === 'all' || card.dataset.category === category) {
+                    setTimeout(() => {
+                        card.style.display = 'block';
+                        setTimeout(() => card.classList.add('show'), 50);
+                    }, index * 100);
+                } else {
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const category = button.getAttribute('data-category');
+                showCards(category);
+            });
+        });
+
+        // Initialize Swiper
+        const swiper = new Swiper('.testimonial-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoHeight: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    centeredSlides: true
+                },
+                1200: {
+                    slidesPerView: 3,
+                    centeredSlides: true
+                }
+            },
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+        });
+
+        // Pause autoplay on hover
+        const swiperContainer = document.querySelector('.testimonial-swiper');
+        swiperContainer.addEventListener('mouseenter', () => swiper.autoplay.stop());
+        swiperContainer.addEventListener('mouseleave', () => swiper.autoplay.start());
+
+        // Smooth scrolling for CTA buttons
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.step, .faq-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Show all cards on load
+        window.addEventListener('DOMContentLoaded', () => {
+            showCards('all');
+        });
+
+        // Add floating animation to service cards
+        serviceCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        // Enhanced hover effects
+        serviceCards.forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-15px) rotateX(5deg) scale(1.02)';
+            });
+
+            card.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0) rotateX(0deg) scale(1)';
+            });
+        });
+
+        // Parallax effect for background shapes
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const shapes = document.querySelectorAll('.floating-shape');
+
+            shapes.forEach((shape, index) => {
+                const speed = 0.5 + (index * 0.2);
+                shape.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.1}deg)`;
+            });
+        });
+
+        // Loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<span class="rating-value">5.0</span>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+    <div class="testimonial-card">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&w=256&h=256&facepad=2"
+            alt="Mark T." loading="lazy">
+        <p>"Professional, reliable, and thorough. Perfect for our office space. Highly recommend their services!"</p>
+        <h4>- Mark T.</h4>
+        <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span class="rating-value">5.0</span>
+        </div>
+    </div>
+</div>
+<div class="swiper-slide">
+    <div class="testimonial-card">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=facearea&w=256&h=256&facepad=2"
+            alt="Emma R." loading="lazy">
+        <p>"Game-changer for my Airbnb! Guests consistently mention how spotless everything is. Worth every penny."</p>
+        <h4>- Emma R.</h4>
+        <div class="rating">
+            <i class="fas fa-star"></i>
