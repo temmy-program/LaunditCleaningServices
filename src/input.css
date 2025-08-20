@@ -1,0 +1,7 @@
+@import "tailwindcss"; 
+@layer utilities {
+  .open {
+    justify-content: start;
+    height: 300px;
+  }
+}
