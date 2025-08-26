@@ -40,7 +40,7 @@ function changeSlide() {
   btn.textContent = slides[i].button;
 
   // Animate in
-  [title, subtitle, btn].forEach((el, idx) => {
+  [title, subtitle, btn].forEach((el) => {
     setTimeout(() => {
       el.classList.remove("opacity-0", "translate-y-12");
       el.classList.add("opacity-100", "translate-y-0");
