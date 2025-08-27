@@ -695,8 +695,8 @@
   .border-\[\#007acc\] {
     border-color: #007acc;
   }
-  .border-\[\#5409DA\] {
-    border-color: #5409DA;
+  .border-\[\#0099ff\] {
+    border-color: #0099ff;
   }
   .border-blue-500 {
     border-color: var(--color-blue-500);
@@ -1081,11 +1081,11 @@
   .text-\[\#1e90ff\] {
     color: #1e90ff;
   }
+  .text-\[\#0099ff\] {
+    color: #0099ff;
+  }
   .text-\[\#444\] {
     color: #444;
-  }
-  .text-\[\#5409DA\] {
-    color: #5409DA;
   }
   .text-\[\#589167\] {
     color: #589167;
@@ -1443,10 +1443,24 @@
       }
     }
   }
+  .hover\:bg-\[\#5d86a0\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #5d86a0;
+      }
+    }
+  }
   .hover\:bg-\[\#007acc\] {
     &:hover {
       @media (hover: hover) {
         background-color: #007acc;
+      }
+    }
+  }
+  .hover\:bg-\[\#0097ea\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #0097ea;
       }
     }
   }
@@ -1501,6 +1515,13 @@
       @media (hover: hover) {
         --tw-gradient-to: var(--color-cyan-600);
         --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+      }
+    }
+  }
+  .hover\:text-\[\#0099ff\] {
+    &:hover {
+      @media (hover: hover) {
+        color: #0099ff;
       }
     }
   }
@@ -1876,6 +1897,12 @@
   }
   .text-gradient {
     background: linear-gradient(135deg, #5409da 0%, #4e71ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient2 {
+    background: linear-gradient(135deg,#0099ff 0%, #0097ea 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
