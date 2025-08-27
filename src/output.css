@@ -242,6 +242,9 @@
   .absolute {
     position: absolute;
   }
+  .fixed {
+    position: fixed;
+  }
   .relative {
     position: relative;
   }
@@ -266,8 +269,14 @@
   .-bottom-6 {
     bottom: calc(var(--spacing) * -6);
   }
+  .bottom-1 {
+    bottom: calc(var(--spacing) * 1);
+  }
   .bottom-12 {
     bottom: calc(var(--spacing) * 12);
+  }
+  .bottom-14 {
+    bottom: calc(var(--spacing) * 14);
   }
   .-left-2 {
     left: calc(var(--spacing) * -2);
