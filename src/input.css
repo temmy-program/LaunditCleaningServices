@@ -4,10 +4,20 @@
     font-family: "Inter", sans-serif;
   }
   .hero-gradient {
-    background: linear-gradient( 135deg, rgba(84, 9, 218, 0.2) 0%, rgba(84, 9, 218, 0.1) 100% );
+    background: linear-gradient(
+      135deg,
+      rgba(84, 9, 218, 0.2) 0%,
+      rgba(84, 9, 218, 0.1) 100%
+    );
   }
   .text-gradient {
     background: linear-gradient(135deg, #5409da 0%, #4e71ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient2{
+    background: linear-gradient(135deg,#0099ff 0%, #0097ea 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -32,7 +42,8 @@
     background: #5409da;
     transition: width 0.3s ease;
   }
-  .nav-link:hover::after, .nav-link.active::after {
+  .nav-link:hover::after,
+  .nav-link.active::after {
     width: 100%;
   }
   .slick-dots li button:before {
@@ -46,13 +57,15 @@
     transition: all 0.3s ease;
     cursor: pointer;
   }
-  .service-tab:hover, .service-tab.active {
+  .service-tab:hover,
+  .service-tab.active {
     background-color: #5409da;
     color: white;
     transform: translateX(10px);
   }
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px);
     }
     50% {
@@ -322,4 +335,3 @@
     --tw-gradient-to: #36038d;
   }
 }
-

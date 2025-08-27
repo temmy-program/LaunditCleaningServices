@@ -4,12 +4,6 @@ const mobileMenu = document.getElementById("mobile-menu");
 mobileMenuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
 });
-mobileMenu.addEventListener("mouseenter", () => {
-  mobileMenu.classList.add("hidden");
-});
-mobileMenu.addEventListener("mouseleave", () => {
-  mobileMenu.classList.remove("hidden");
-});
 // Service Tabs
 const serviceTabs = document.querySelectorAll(".service-tab");
 const serviceImage = document.getElementById("service-image");
