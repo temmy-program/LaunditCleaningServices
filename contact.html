@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>LuxeLaundry — Contact & Booking</title>
 
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <!-- Tailwind CSS CDN (for demo, use PostCSS in production) -->
@@ -18,12 +20,12 @@
 
   <!-- Header -->
   <!-- Top Bar -->
-    <header class="bg-gradient-to-r from-[#5409DA] to-[#0000ef] text-white">
+    <header class="bg-gradient-to-r from-[#5409DA] to-[#0000ef] text-white" data-aos="fade-down" data-aos-duration="800">
       <div class="container px-4 mx-auto">
         <div
           class="flex flex-col items-center justify-between py-3 text-sm sm:flex-row"
         >
-          <div class="flex items-center mb-2 space-x-4 sm:mb-0">
+          <div class="flex items-center mb-2 space-x-4 sm:mb-0" data-aos="fade-right" data-aos-duration="700" data-aos-delay="80">
             <a
               href="tel:+491234567890"
               class="flex items-center transition hover:text-CustomPurple-200"
@@ -50,7 +52,7 @@
               info@laundit.com
             </a>
           </div>
-          <div class="flex items-center space-x-4">
+          <div class="flex items-center space-x-4" data-aos="fade-left" data-aos-duration="700" data-aos-delay="120">
             <a href="#" class="transition hover:text-customPurple-200">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -78,10 +80,10 @@
     </header>
 
     <!-- Navigation -->
-    <nav id="navbar" class="sticky top-0 z-50 bg-white shadow-lg">
+    <nav id="navbar" class="sticky top-0 z-50 bg-white shadow-lg" data-aos="fade-down" data-aos-duration="700" data-aos-delay="140">
       <div class="container px-4 mx-auto">
         <div class="flex items-center justify-between h-16">
-          <div class="flex items-center">
+          <div class="flex items-center" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="160">
             <h1 class="text-2xl font-bold text-gradient">
               LAUNDIT
               <span class="ml-1 text-xs italic text-gray-500">premium</span>
@@ -159,10 +161,10 @@
     <div class="max-w-[1200px] mx-auto p-5">
     <!-- Hero Section -->
     <section class="py-10 mb-10 text-center">
-      <h1 class="text-[1.8rem] md:text-[2.2rem] lg:text-[2.8rem] font-bold text-[#1E6FBA] leading-tight mb-4">
+      <h1 class="text-[1.8rem] md:text-[2.2rem] lg:text-[2.8rem] font-bold text-[#1E6FBA] leading-tight mb-4" data-aos="fade-up" data-aos-duration="900" data-aos-delay="120">
         Premium Laundry & Dry Cleaning Services
       </h1>
-      <p class="text-base md:text-lg text-[#718096] max-w-[700px] mx-auto">
+      <p class="text-base md:text-lg text-[#718096] max-w-[700px] mx-auto" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
         Experience the luxury of fresh, clean clothes with our professional pickup, delivery, and VIP attention services.
       </p>
     </section>
@@ -170,7 +172,7 @@
     <!-- Main Content Grid -->
     <div class="grid grid-cols-1 gap-8 mb-10 md:grid-cols-2">
       <!-- Contact Info Card -->
-      <div class="transition-transform bg-white shadow-lg rounded-xl p-7 hover:-translate-y-1 hover:shadow-2xl">
+      <div class="transition-transform bg-white shadow-lg rounded-xl p-7 hover:-translate-y-1 hover:shadow-2xl" data-aos="fade-right" data-aos-duration="800" data-aos-delay="140">
         <h3 class="text-xl font-semibold text-[#1E6FBA] mb-6 pb-3 border-b border-[#E2E8F0] relative">
           Contact Details
         </h3>
@@ -201,7 +203,7 @@
       </div>
 
       <!-- Contact Form Card -->
-      <div class="bg-white shadow-lg rounded-xl p-7">
+      <div class="bg-white shadow-lg rounded-xl p-7" data-aos="fade-left" data-aos-duration="800" data-aos-delay="220">
         <h3 class="text-xl font-semibold text-[#1E6FBA] mb-6 pb-3 border-b border-[#E2E8F0] relative">
           Send Us a Message
         </h3>
@@ -217,7 +219,7 @@
     </div>
 
     <!-- Map Section -->
-    <div class="my-10">
+    <div class="my-10" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="260">
       <div class="rounded-xl overflow-hidden shadow-lg h-[400px]">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40491.800336422594!2d-1.880769397403007!3d50.72146942217212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873a1b54df7b2bd%3A0xabb6f2b83d4b2b05!2sBournemouth!5e0!3m2!1sen!2suk!4v1720228436015!5m2!1sen!2suk" 
@@ -231,7 +233,7 @@
   </div>
 
   <!-- Appointment Modal -->
-  <div class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black/60 backdrop-blur-sm" id="modal">
+  <div class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black/60 backdrop-blur-sm" id="modal" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="120">
     <div class="w-full max-w-lg bg-white rounded-xl shadow-2xl p-8 relative max-h-[90vh] overflow-y-auto">
       <button class="absolute top-4 right-4 text-2xl text-[#718096] hover:text-[#1E6FBA] bg-transparent rounded-full w-8 h-8 flex items-center justify-center transition" onclick="closeModal()">&times;</button>
       <h3 class="text-xl font-semibold text-[#1E6FBA] mb-6">Book a Laundry Appointment</h3>
@@ -267,8 +269,8 @@
   </div>
 
   <!-- Floating Contact Widget -->
-  <div class="fixed z-50 right-6 bottom-6">
-    <div class="flex flex-col hidden gap-3 mb-4" id="widget-options">
+  <div class="fixed z-50 right-6 bottom-6" id="floating-widget" data-aos="fade-up" data-aos-duration="700" data-aos-delay="320">
+    <div class="flex flex-col md:hidden gap-3 mb-4" id="widget-options">
       <a href="https://wa.me/441234567890" target="_blank" class="flex items-center justify-center w-12 h-12 text-lg transition bg-white rounded-full shadow-md hover:-translate-y-1" title="WhatsApp">
         <i class="fab fa-whatsapp" style="color: #25D366;"></i>
       </a>
@@ -288,7 +290,7 @@
   </div>
 
   <!-- Chatbox -->
-  <div class="fixed right-6 bottom-28 w-[350px] max-w-[calc(100vw-60px)] rounded-xl shadow-2xl overflow-hidden hidden z-50 bg-white" id="chatbox">
+  <div class="fixed right-6 bottom-28 w-[350px] max-w-[calc(100vw-60px)] rounded-xl shadow-2xl overflow-hidden hidden z-50 bg-white" id="chatbox" data-aos="fade-left" data-aos-duration="700" data-aos-delay="360">
     <div class="bg-[#1E6FBA] text-white px-5 py-4 flex justify-between items-center">
       <div class="text-base font-semibold">Laundit cleaning service Assistant</div>
       <button class="flex items-center justify-center w-8 h-8 text-xl text-white transition bg-transparent border-none rounded-full hover:bg-white/20" onclick="closeChatbox()">&times;</button>
@@ -310,7 +312,7 @@
     <footer id="contact" class="py-12 text-white bg-gray-900">
       <div class="container px-4 mx-auto">
         <div class="grid gap-8 md:grid-cols-4">
-          <div>
+          <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="140">
             <h3 class="mb-4 text-2xl font-bold text-gradient">LAUNDIT</h3>
             <p class="text-gray-400">
               Professional cleaning services for a better and healthier life.
@@ -320,27 +322,27 @@
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
                     d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                  />
+                />
                 </svg>
               </a>
               <a href="#" class="transition hover:text-customPurple-500">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
                     d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
-                  />
+                />
                 </svg>
               </a>
               <a href="#" class="transition hover:text-customPurple-500">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"
-                  />
+                />
                 </svg>
               </a>
             </div>
           </div>
 
-          <div>
+          <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
             <h4 class="mb-4 text-lg font-semibold">Quick Links</h4>
             <ul class="space-y-2 text-gray-400">
               <li>
@@ -370,7 +372,7 @@
             </ul>
           </div>
 
-          <div>
+          <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="260">
             <h4 class="mb-4 text-lg font-semibold">Our Services</h4>
             <ul class="space-y-2 text-gray-400">
               <li>
@@ -396,7 +398,7 @@
             </ul>
           </div>
 
-          <div>
+          <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="320">
             <h4 class="mb-4 text-lg font-semibold">Contact Info</h4>
             <ul class="space-y-3 text-gray-400">
               <li class="flex items-start">
@@ -613,6 +615,14 @@
       if (e.target === modal) {
         closeModal();
       }
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      easing: 'ease-in-out',
+      once: false
     });
   </script>
   <script src="./src/script.js"></script>

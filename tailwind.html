@@ -9,6 +9,8 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="shortcut icon" href="./src/favicon.ico" type="image/x-icon" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <style>
@@ -259,92 +261,94 @@
             </a>
           </div>
         </div>
-      </div>
     </header>
 
-    <!-- Navigation -->
-    <nav id="navbar" class="sticky top-0 z-50 bg-white shadow-lg">
-      <div class="container px-4 mx-auto">
-        <div class="flex items-center justify-between h-16">
-          <div class="flex items-center">
-            <h1 class="text-2xl font-bold text-gradient">
-              LAUNDIT
-              <span class="ml-1 text-xs italic text-gray-500">premium</span>
-            </h1>
+        <!-- Navigation -->
+        <nav id="navbar" class="sticky top-0 z-50 bg-white shadow-lg" data-aos="fade-down" data-aos-duration="700" data-aos-delay="140">
+          <div class="container px-4 mx-auto">
+            <div class="flex items-center justify-between h-16">
+              <div class="flex items-center">
+                <h1 class="text-2xl font-bold text-gradient">
+                  LAUNDIT
+                  <span class="ml-1 text-xs italic text-gray-500">premium</span>
+                </h1>
+              </div>
+
+              <!-- Desktop Navigation -->
+              <div class="items-center hidden space-x-8 md:flex-1 md:flex md:max-w-[600px] md:justify-between">
+                <a
+                  href="./index.html"
+                  class="font-medium text-gray-700 nav-link hover:text-customPurple-500"
+                  >Home</a
+                >
+                <a
+                  href="./about.html"
+                  class="font-medium text-gray-700 nav-link hover:text--500"
+                  >About</a
+                >
+                <a
+                  href="./tailwind.html"
+                  class="font-medium text-gray-700 nav-link active hover:text-customPurple-500"
+                  >Services</a
+                >
+                <a
+                  href="./contact.html"
+                  class="font-medium text-gray-700 nav-link hover:text-customPurple-500"
+                  >Contact</a
+                >
+              </div>
+
+              <!-- Mobile Menu Button -->
+              <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+                <svg
+                  class="w-6 h-6 text-gray-700"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden pb-4 md:hidden">
+              <a
+                href="./index.html"
+                class="block py-2 font-medium text-gray-700 hover:text-customPurple-500"
+                >Home</a
+              >
+              <a
+                href="./about.html"
+                class="block py-2 font-medium text-gray-700 hover:text-customPurple-500"
+                >About</a
+              >
+              <a
+                href="./tailwind.html"
+                class="block py-2 font-medium text-gray-700 active hover:text-customPurple-500"
+                >Services</a
+              >
+              <a
+                href="./contact.html"
+                class="block py-2 font-medium text-gray-700 hover:text-customPurple-500"
+                >Contact</a
+              >
+            </div>
           </div>
-
-          <!-- Desktop Navigation -->
-          <div class="items-center hidden space-x-8 md:flex-1 md:flex md:max-w-[600px] md:justify-between">
-            <a
-              href="./index.html"
-              class="font-medium text-gray-700 nav-link hover:text-customPurple-500"
-              >Home</a
-            >
-            <a
-              href="./about.html"
-              class="font-medium text-gray-700 nav-link hover:text--500"
-              >About</a
-            >
-            <a
-              href="./tailwind.html"
-              class="font-medium text-gray-700 nav-link active hover:text-customPurple-500"
-              >Services</a
-            >
-            <a
-              href="./contact.html"
-              class="font-medium text-gray-700 nav-link hover:text-customPurple-500"
-              >Contact</a
-            >
-          </div>
-
-          <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
-            <svg
-              class="w-6 h-6 text-gray-700"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="hidden pb-4 md:hidden">
-          <a
-            href="./index.html"
-            class="block py-2 font-medium text-gray-700 hover:text-customPurple-500"
-            >Home</a
-          >
-          <a
-            href="./about.html"
-            class="block py-2 font-medium text-gray-700 hover:text-customPurple-500"
-            >About</a
-          >
-          <a
-            href="./tailwind.html"
-            class="block py-2 font-medium text-gray-700 active hover:text-customPurple-500"
-            >Services</a
-          >
-          <a
-            href="./contact.html"
-            class="block py-2 font-medium text-gray-700 hover:text-customPurple-500"
-            >Contact</a
-          >
-        </div>
-      </div>
-    </nav>
+        </nav>
 
   <!-- HERO SECTION -->
   <section
     id="home"
     class="relative flex items-center min-h-screen hero-gradient"
+    data-aos="fade-up"
+    data-aos-duration="900"
+    data-aos-delay="100"
     >
       <div class="absolute inset-0 z-0">
         <img
@@ -355,15 +359,18 @@
       </div>
       <div class="container relative z-10 px-4 mx-auto">
         <div class="grid items-center gap-12 md:grid-cols-2">
-          <div class="text-center md:text-left">
+          <div class="text-center md:text-left" data-aos="fade-right" data-aos-duration="900" data-aos-delay="200">
             <h2
               class="mb-6 text-5xl font-bold leading-tight text-gray-800 md:text-6xl"
+              data-aos="zoom-in"
+              data-aos-duration="900"
+              data-aos-delay="300"
             >
               Cleaning for a
               <span class="text-gradient2"> Better</span> and
               <span class="text-gradient2"> Healthier</span> Life
             </h2>
-            <p class="mb-8 text-xl leading-relaxed text-gray-600">
+            <p class="mb-8 text-xl leading-relaxed text-gray-600" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
               Transform your space with our professional cleaning services. We
               bring excellence, reliability, and eco-friendly solutions to every
               home and office.
@@ -373,11 +380,17 @@
             >
               <button
                 class="px-8 py-4 text-white transition transform rounded-full shadow-lg bg-[#0099ff] hover:bg-[#0097ea] hover:scale-105"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay="500"
               >
                 Book Now
               </button>
               <button
                 class="border-2 border-[#0099ff] text-[#0099ff] px-8 py-4 rounded-full hover:bg-[#0097ea] hover:text-white transition transform hover:scale-105"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay="560"
               >
                 Learn More
               </button>
@@ -395,7 +408,6 @@
         </div>
       </div>
     </section>
-
   <!-- SERVICES SECTION -->
   <section class="px-6 py-12 max-w-[1400px] mx-auto relative">
     <!-- Header -->
@@ -468,7 +480,10 @@
     <!-- Office Cleaning -->
     <div
       class="relative p-6 text-center transition-all translate-y-5 bg-white shadow-lg opacity-0 service-card rounded-xl duration-400"
-      data-category="office">
+      data-category="office"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-delay="120">
       <span
         class="badge absolute top-4 left-4 bg-gradient-to-r from-indigo-500 to-cyan-400 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase shadow-md tracking-wide transform hover:scale-105 transition-all duration-300">
         Most Popular
@@ -484,7 +499,10 @@
     <!-- Home Cleaning -->
     <div
       class="relative p-6 text-center transition-all translate-y-5 bg-white shadow-lg opacity-0 service-card rounded-xl duration-400"
-      data-category="home">
+      data-category="home"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-delay="220">
       <span
         class="badge absolute top-4 left-4 bg-gradient-to-r from-indigo-500 to-cyan-400 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase shadow-md tracking-wide transform hover:scale-105 transition-all duration-300">
         Eco-Friendly
@@ -500,7 +518,10 @@
     <!-- Glass Cleaning -->
     <div
       class="relative p-6 text-center transition-all translate-y-5 bg-white shadow-lg opacity-0 service-card rounded-xl duration-400"
-      data-category="glass">
+      data-category="glass"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-delay="320">
       <span
         class="badge absolute top-4 left-4 bg-gradient-to-r from-indigo-500 to-cyan-400 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase shadow-md tracking-wide transform hover:scale-105 transition-all duration-300">
         Streak-Free
@@ -517,7 +538,10 @@
     <!-- Airbnb Cleaning -->
     <div
       class="relative p-6 text-center transition-all translate-y-5 bg-white shadow-lg opacity-0 service-card rounded-xl duration-400"
-      data-category="airbnb">
+      data-category="airbnb"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-delay="420">
       <span
         class="badge absolute top-4 left-4 bg-gradient-to-r from-indigo-500 to-cyan-400 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase shadow-md tracking-wide transform hover:scale-105 transition-all duration-300">
         Quick Turnaround
@@ -534,7 +558,10 @@
     <!-- Mould Removal -->
     <div
       class="relative p-6 text-center transition-all translate-y-5 bg-white shadow-lg opacity-0 service-card rounded-xl duration-400"
-      data-category="mould">
+      data-category="mould"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-delay="520">
       <span
         class="badge absolute top-4 left-4 bg-gradient-to-r from-indigo-500 to-cyan-400 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase shadow-md tracking-wide transform hover:scale-105 transition-all duration-300">
         Health Focused
@@ -550,7 +577,10 @@
     <!-- End-of-Tenancy Clean -->
     <div
       class="relative p-6 text-center transition-all translate-y-5 bg-white shadow-lg opacity-0 service-card rounded-xl duration-400"
-      data-category="tenancy">
+      data-category="tenancy"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-delay="620">
       <span
         class="badge absolute top-4 left-4 bg-gradient-to-r from-indigo-500 to-cyan-400 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase shadow-md tracking-wide transform hover:scale-105 transition-all duration-300">
         End of Lease
@@ -583,7 +613,8 @@
 
     <!-- Step 1 -->
     <div
-      class="group step relative bg-white rounded-2xl p-8 md:p-10 text-center shadow-lg backdrop-blur-[25px] transition transform hover:-translate-y-3 hover:shadow-2xl active:scale-95 duration-500 border border-white/30 cursor-pointer overflow-hidden">
+      class="group step relative bg-white rounded-2xl p-8 md:p-10 text-center shadow-lg backdrop-blur-[25px] transition transform hover:-translate-y-3 hover:shadow-2xl active:scale-95 duration-500 border border-white/30 cursor-pointer overflow-hidden"
+      data-aos="fade-up" data-aos-duration="800" data-aos-delay="140">
 
       <!-- Big Step Number -->
       <span
@@ -612,7 +643,8 @@
 
     <!-- Step 2 -->
     <div
-      class="group step relative bg-white rounded-2xl p-8 md:p-10 text-center shadow-lg backdrop-blur-[25px] transition transform hover:-translate-y-3 hover:shadow-2xl active:scale-95 duration-500 border border-white/30 cursor-pointer overflow-hidden">
+      class="group step relative bg-white rounded-2xl p-8 md:p-10 text-center shadow-lg backdrop-blur-[25px] transition transform hover:-translate-y-3 hover:shadow-2xl active:scale-95 duration-500 border border-white/30 cursor-pointer overflow-hidden"
+      data-aos="fade-up" data-aos-duration="800" data-aos-delay="240">
       <span
         class="absolute text-[110px] md:text-[150px] font-extrabold text-gray-200/30 -top-6 -left-2 pointer-events-none select-none">02</span>
       <div
@@ -633,7 +665,8 @@
 
     <!-- Step 3 -->
     <div
-      class="group step relative bg-white rounded-2xl p-8 md:p-10 text-center shadow-lg backdrop-blur-[25px] transition transform hover:-translate-y-3 hover:shadow-2xl active:scale-95 duration-500 border border-white/30 cursor-pointer overflow-hidden">
+      class="group step relative bg-white rounded-2xl p-8 md:p-10 text-center shadow-lg backdrop-blur-[25px] transition transform hover:-translate-y-3 hover:shadow-2xl active:scale-95 duration-500 border border-white/30 cursor-pointer overflow-hidden"
+      data-aos="fade-up" data-aos-duration="800" data-aos-delay="340">
       <span
         class="absolute text-[110px] md:text-[150px] font-extrabold text-gray-200/30 -top-6 -left-2 pointer-events-none select-none">03</span>
       <div
@@ -656,10 +689,10 @@
 
 
   <div class="swiper testimonial-swiper w-full max-w-[1100px] my-10 mx-auto pb-8 bg-transparent"
-    aria-label="Client testimonials carousel">
+    aria-label="Client testimonials carousel" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="200">
     <div class="swiper-wrapper">
       <!-- Slide 1 -->
-      <div class="flex items-center justify-center swiper-slide bg-none">
+      <div class="flex items-center justify-center swiper-slide bg-none" data-aos="fade-up" data-aos-duration="700" data-aos-delay="260">
         <div
           class="testimonial-card bg-white rounded-[18px] shadow-[0_4px_24px_rgba(30,144,255,0.10)] px-6 pt-8 pb-6 text-center max-w-[340px] w-full mx-auto flex flex-col items-center transition-transform duration-200 hover:-translate-y-[6px] hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(30,144,255,0.16)]">
           <img
@@ -681,7 +714,7 @@
       </div>
 
       <!-- Slide 2 -->
-      <div class="flex items-center justify-center swiper-slide bg-none">
+      <div class="flex items-center justify-center swiper-slide bg-none" data-aos="fade-up" data-aos-duration="700" data-aos-delay="320">
         <div
           class="testimonial-card bg-white rounded-[18px] shadow-[0_4px_24px_rgba(30,144,255,0.10)] px-6 pt-8 pb-6 text-center max-w-[340px] w-full mx-auto flex flex-col items-center transition-transform duration-200 hover:-translate-y-[6px] hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(30,144,255,0.16)]">
           <img
@@ -703,7 +736,7 @@
       </div>
 
       <!-- Slide 3 -->
-      <div class="flex items-center justify-center swiper-slide bg-none">
+      <div class="flex items-center justify-center swiper-slide bg-none" data-aos="fade-up" data-aos-duration="700" data-aos-delay="380">
         <div
           class="testimonial-card bg-white rounded-[18px] shadow-[0_4px_24px_rgba(30,144,255,0.10)] px-6 pt-8 pb-6 text-center max-w-[340px] w-full mx-auto flex flex-col items-center transition-transform duration-200 hover:-translate-y-[6px] hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(30,144,255,0.16)]">
           <img
@@ -801,7 +834,10 @@
 
   <!-- CTA SECTION -->
   <section
-    class="max-w-6xl px-4 py-10 mx-auto my-10 text-center text-white shadow-lg cta-section bg-gradient-to-r from-blue-600 to-cyan-400 rounded-xl">
+    class="max-w-6xl px-4 py-10 mx-auto my-10 text-center text-white shadow-lg cta-section bg-gradient-to-r from-blue-600 to-cyan-400 rounded-xl"
+    data-aos="fade-up"
+    data-aos-duration="900"
+    data-aos-delay="180">
     <h2 class="mb-2 text-2xl font-bold md:text-3xl">Ready for a Spotless Experience?</h2>
     <p class="mb-4 text-lg">Book your cleaning or laundry service today and enjoy peace of mind!</p>
     <a href="#booking"
@@ -814,10 +850,11 @@
 
 
   <!-- FAQ SECTION -->
-  <div class="max-w-2xl p-10 mx-auto my-16 border faq-section bg-white/90 backdrop-blur-lg rounded-3xl border-white/30">
+  <div class="max-w-2xl p-10 mx-auto my-16 border faq-section bg-white/90 backdrop-blur-lg rounded-3xl border-white/30" data-aos="fade-right" data-aos-duration="900" data-aos-delay="200">
     <h2 class="mb-8 text-3xl font-extrabold text-center text-blue-600">Frequently Asked Questions</h2>
     <div
-      class="p-6 mb-6 transition border-l-4 border-blue-500 cursor-pointer faq-item bg-blue-100/30 rounded-xl hover:bg-blue-100/60 hover:translate-x-4 hover:shadow-lg">
+      class="p-6 mb-6 transition border-l-4 border-blue-500 cursor-pointer faq-item bg-blue-100/30 rounded-xl hover:bg-blue-100/60 hover:translate-x-4 hover:shadow-lg"
+      data-aos="fade-left" data-aos-duration="800" data-aos-delay="240">
       <h3 class="flex items-center justify-between mb-2 text-lg font-bold text-blue-600">What areas do you
         service? <span class="ml-2 faq-toggle"><i class="fas fa-chevron-down"></i></span></h3>
       <div class="overflow-hidden transition-all duration-500 faq-answer max-h-0">
@@ -826,7 +863,8 @@
       </div>
     </div>
     <div
-      class="p-6 mb-6 transition border-l-4 border-blue-500 cursor-pointer faq-item bg-blue-100/30 rounded-xl hover:bg-blue-100/60 hover:translate-x-4 hover:shadow-lg">
+      class="p-6 mb-6 transition border-l-4 border-blue-500 cursor-pointer faq-item bg-blue-100/30 rounded-xl hover:bg-blue-100/60 hover:translate-x-4 hover:shadow-lg"
+      data-aos="fade-left" data-aos-duration="800" data-aos-delay="260">
       <h3 class="flex items-center justify-between mb-2 text-lg font-bold text-blue-600">Do you use eco-friendly
         products? <span class="ml-2 faq-toggle"><i class="fas fa-chevron-down"></i></span></h3>
       <div class="overflow-hidden transition-all duration-500 faq-answer max-h-0">
@@ -835,7 +873,8 @@
       </div>
     </div>
     <div
-      class="p-6 mb-6 transition border-l-4 border-blue-500 cursor-pointer faq-item bg-blue-100/30 rounded-xl hover:bg-blue-100/60 hover:translate-x-4 hover:shadow-lg">
+      class="p-6 mb-6 transition border-l-4 border-blue-500 cursor-pointer faq-item bg-blue-100/30 rounded-xl hover:bg-blue-100/60 hover:translate-x-4 hover:shadow-lg"
+      data-aos="fade-left" data-aos-duration="800" data-aos-delay="280">
       <h3 class="flex items-center justify-between mb-2 text-lg font-bold text-blue-600">How do I book a service?
         <span class="ml-2 faq-toggle"><i class="fas fa-chevron-down"></i></span>
       </h3>
@@ -845,7 +884,8 @@
       </div>
     </div>
     <div
-      class="p-6 mb-6 transition border-l-4 border-blue-500 cursor-pointer faq-item bg-blue-100/30 rounded-xl hover:bg-blue-100/60 hover:translate-x-4 hover:shadow-lg">
+      class="p-6 mb-6 transition border-l-4 border-blue-500 cursor-pointer faq-item bg-blue-100/30 rounded-xl hover:bg-blue-100/60 hover:translate-x-4 hover:shadow-lg"
+      data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
       <h3 class="flex items-center justify-between mb-2 text-lg font-bold text-blue-600">What if I need to
         reschedule? <span class="ml-2 faq-toggle"><i class="fas fa-chevron-down"></i></span></h3>
       <div class="overflow-hidden transition-all duration-500 faq-answer max-h-0">
@@ -856,11 +896,11 @@
   </div>
 
   <!-- Footer -->
-  <footer id="contact" class="py-12 text-white bg-gray-900">
+  <footer id="contact" class="py-12 text-white bg-gray-900" data-aos="fade-up" data-aos-duration="800" data-aos-delay="160">
     <div class="container px-4 mx-auto">
       <div class="grid gap-8 md:grid-cols-4">
-        <div>
-          <h3 class="mb-4 text-2xl font-bold text-gradient2">LAUNDIT</h3>
+        <div data-aos="fade-right" data-aos-duration="700" data-aos-delay="180">
+          <h3 class="mb-4 text-2xl font-bold text-gradient">LAUNDIT</h3>
           <p class="text-gray-400">
             Professional cleaning services for a better and healthier life.
           </p>
@@ -886,7 +926,7 @@
           </div>
         </div>
 
-        <div>
+        <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="220">
           <h4 class="mb-4 text-lg font-semibold">Quick Links</h4>
           <ul class="space-y-2 text-gray-400">
             <li>
@@ -904,7 +944,7 @@
           </ul>
         </div>
 
-        <div>
+        <div data-aos="fade-left" data-aos-duration="700" data-aos-delay="260">
           <h4 class="mb-4 text-lg font-semibold">Our Services</h4>
           <ul class="space-y-2 text-gray-400">
             <li>
@@ -922,7 +962,7 @@
           </ul>
         </div>
 
-        <div>
+        <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
           <h4 class="mb-4 text-lg font-semibold">Contact Info</h4>
           <ul class="space-y-3 text-gray-400">
             <li class="flex items-start">
@@ -937,7 +977,7 @@
               <svg class="w-5 h-5 mr-2 text-customPurple-500" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
+            </svg>
               +49 123 456 7890
             </li>
             <li class="flex items-center">
@@ -961,6 +1001,8 @@
       </div>
     </div>
   </footer>
+
+  <!-- existing scripts -->
   <script>
     // Swiper initialization
     new Swiper('.testimonial-swiper', {
@@ -1065,6 +1107,17 @@
 
     mobileMenuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+  <!-- AOS JS + init (add after your other scripts) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: false,
+      duration: 700,
+      easing: 'ease-in-out',
+      mirror: false
     });
   </script>
 </body>
