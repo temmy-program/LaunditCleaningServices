@@ -16,8 +16,8 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  .text-gradient2{
-    background: linear-gradient(135deg,#0099ff 0%, #0097ea 100%);
+  .text-gradient2 {
+    background: linear-gradient(135deg, #0099ff 0%, #0097ea 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -75,263 +75,30 @@
   .float-animation {
     animation: float 6s ease-in-out infinite;
   }
+  /* ...existing code... */
+  body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
 }
-@layer colors {
-  .bg-customPurple-50 {
-    background-color: #f1e7ff;
-  }
-  .bg-customPurple-100 {
-    background-color: #dbc3ff;
-  }
-  .bg-customPurple-200 {
-    background-color: #be98fb;
-  }
-  .bg-customPurple-300 {
-    background-color: #9e6ef5;
-  }
-  .bg-customPurple-400 {
-    background-color: #8149ed;
-  }
-  .bg-customPurple-500 {
-    background-color: #5409da;
-  }
-  .bg-customPurple-600 {
-    background-color: #4505b3;
-  }
-  .bg-customPurple-700 {
-    background-color: #36038d;
-  }
-  .bg-customPurple-800 {
-    background-color: #260066;
-  }
-  .bg-customPurple-900 {
-    background-color: #1b0047;
-  }
-  .text-customPurple-50 {
-    color: #f1e7ff;
-  }
-  .text-customPurple-100 {
-    color: #dbc3ff;
-  }
-  .text-customPurple-200 {
-    color: #be98fb;
-  }
-  .text-customPurple-300 {
-    color: #9e6ef5;
-  }
-  .text-customPurple-400 {
-    color: #8149ed;
-  }
-  .text-customPurple-500 {
-    color: #5409da;
-  }
-  .text-customPurple-600 {
-    color: #4505b3;
-  }
-  .text-customPurple-700 {
-    color: #36038d;
-  }
-  .text-customPurple-800 {
-    color: #260066;
-  }
-  .text-customPurple-900 {
-    color: #1b0047;
-  }
-  .border-customPurple-50 {
-    border-color: #f1e7ff;
-  }
-  .border-customPurple-100 {
-    border-color: #dbc3ff;
-  }
-  .border-customPurple-200 {
-    border-color: #be98fb;
-  }
-  .border-customPurple-300 {
-    border-color: #9e6ef5;
-  }
-  .border-customPurple-400 {
-    border-color: #8149ed;
-  }
-  .border-customPurple-500 {
-    border-color: #5409da;
-  }
-  .border-customPurple-600 {
-    border-color: #4505b3;
-  }
-  .border-customPurple-700 {
-    border-color: #36038d;
-  }
-  .border-customPurple-800 {
-    border-color: #260066;
-  }
-  .border-customPurple-900 {
-    border-color: #1b0047;
-  }
-  .ring-customPurple-500 {
-    --tw-ring-color: #5409da;
-  }
-  .ring-offset-customPurple-500 {
-    --tw-ring-offset-color: #5409da;
-  }
-  .outline-customPurple-500 {
-    outline-color: #5409da;
-  }
-  .from-customPurple-50 {
-    --tw-gradient-from: #f1e7ff;
-    --tw-gradient-to: rgb(241 231 255 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-  .to-customPurple-50 {
-    --tw-gradient-to: #f1e7ff;
-  }
-  .from-customPurple-100 {
-    --tw-gradient-from: #dbc3ff;
-    --tw-gradient-to: rgb(219 195 255 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-  .to-customPurple-100 {
-    --tw-gradient-to: #dbc3ff;
-  }
-  .from-customPurple-200 {
-    --tw-gradient-from: #be98fb;
-    --tw-gradient-to: rgb(190 152 251 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-  .to-customPurple-200 {
-    --tw-gradient-to: #be98fb;
-  }
-  .from-customPurple-300 {
-    --tw-gradient-from: #9e6ef5;
-    --tw-gradient-to: rgb(158 110 245 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-  .to-customPurple-300 {
-    --tw-gradient-to: #9e6ef5;
-  }
-  .from-customPurple-400 {
-    --tw-gradient-from: #8149ed;
-    --tw-gradient-to: rgb(129 73 237 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-  .to-customPurple-400 {
-    --tw-gradient-to: #8149ed;
-  }
-  .from-customPurple-500 {
-    --tw-gradient-from: #5409da;
-    --tw-gradient-to: rgb(84 9 218 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-  .to-customPurple-500 {
-    --tw-gradient-to: #5409da;
-  }
-  .from-customPurple-600 {
-    --tw-gradient-from: #4505b3;
-    --tw-gradient-to: rgb(69 5 179 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-  .to-customPurple-600 {
-    --tw-gradient-to: #4505b3;
-  }
-  .from-customPurple-700 {
-    --tw-gradient-from: #36038d;
-    --tw-gradient-to: rgb(54 3 141 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-  .to-customPurple-700 {
-    --tw-gradient-to: #36038d;
-  }
-  .from-customPurple-800 {
-    --tw-gradient-from: #260066;
-    --tw-gradient-to: rgb(38 0 102 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-  .to-customPurple-800 {
-    --tw-gradient-to: #260066;
-  }
-  .from-customPurple-900 {
-    --tw-gradient-from: #1b0047;
-    --tw-gradient-to: rgb(27 0 71 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-  .to-customPurple-900 {
-    --tw-gradient-to: #1b0047;
-  }
-  .hover\:bg-customPurple-500:hover {
-    background-color: #5409da;
-  }
-  .hover\:bg-customPurple-600:hover {
-    background-color: #4505b3;
-  }
-  .hover\:text-customPurple-500:hover {
-    color: #5409da;
-  }
-  .hover\:text-customPurple-600:hover {
-    color: #4505b3;
-  }
-  .hover\:border-customPurple-500:hover {
-    border-color: #5409da;
-  }
-  .hover\:border-customPurple-600:hover {
-    border-color: #4505b3;
-  }
-  .hover\:ring-customPurple-500:hover {
-    --tw-ring-color: #5409da;
-  }
-  .hover\:outline-customPurple-500:hover {
-    outline-color: #5409da;
-  }
-  .hover\:from-customPurple-500:hover {
-    --tw-gradient-from: #5409da;
-    --tw-gradient-to: rgb(84 9 218 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-  .hover\:to-customPurple-500:hover {
-    --tw-gradient-to: #5409da;
-  }
-  .focus\:bg-customPurple-500:focus {
-    background-color: #5409da;
-  }
-  .focus\:text-customPurple-500:focus {
-    color: #5409da;
-  }
-  .focus\:border-customPurple-500:focus {
-    border-color: #5409da;
-  }
-  .focus\:ring-customPurple-500:focus {
-    --tw-ring-color: #5409da;
-  }
-  .focus\:outline-customPurple-500:focus {
-    outline-color: #5409da;
-  }
-  .focus\:from-customPurple-500:focus {
-    --tw-gradient-from: #5409da;
-    --tw-gradient-to: rgb(84 9 218 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-  .focus\:to-customPurple-500:focus {
-    --tw-gradient-to: #5409da;
-  }
-  .active\:bg-customPurple-600:active {
-    background-color: #4505b3;
-  }
-  .active\:text-customPurple-600:active {
-    color: #4505b3;
-  }
-  .active\:border-customPurple-600:active {
-    border-color: #4505b3;
-  }
-  .active\:ring-customPurple-600:active {
-    --tw-ring-color: #4505b3;
-  }
-  .active\:outline-customPurple-600:active {
-    outline-color: #4505b3;
-  }
-  .active\:from-customPurple-700:active {
-    --tw-gradient-from: #36038d;
-    --tw-gradient-to: rgb(54 3 141 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-  .active\:to-customPurple-700:active {
-    --tw-gradient-to: #36038d;
-  }
+@theme colors {
+  --color-customPurple-50: #f1e7ff;
+
+  --color-customPurple-100: #dbc3ff;
+
+  --color-customPurple-200: #be98fb;
+
+  --color-customPurple-300: #9e6ef5;
+
+  --color-customPurple-400: #8149ed;
+
+  --color-customPurple-500: #5409da;
+
+  --color-customPurple-600: #4505b3;
+
+  --color-customPurple-700: #36038d;
+
+  --color-customPurple-800: #260066;
+
+  --color-customPurple-900: #1b0047;
 }
