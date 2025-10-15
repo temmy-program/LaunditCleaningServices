@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LuxeLaundry — Contact & Booking</title>
-
+<title>Express Gold — Premium Cleaning & Booking</title>  <link rel="icon" type="image/x-icon" href="./src/favicon.ico" />
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Font Awesome for icons -->
@@ -36,12 +35,12 @@
             </svg>
             +44 7377 664964
           </a>
-          <a href="mailto:info@laundit.com" class="flex items-center transition hover:text-customPurple-200">
+          <a href="mailto:info@expressgold.co.uk" class="flex items-center transition hover:text-customPurple-200">
             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
               <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
             </svg>
-            info@laundit.com
+            info@expressgold.co.uk
           </a>
         </div>
         <div class="flex items-center space-x-4" data-aos="fade-left" data-aos-duration="700" data-aos-delay="120">
@@ -75,7 +74,7 @@
       <div class="flex items-center justify-between h-16">
         <div class="flex items-center" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="160">
           <h1 class="text-2xl font-bold text-gradient">
-            LAUNDIT
+            EXPRESS GOLD
             <span class="ml-1 text-xs italic text-gray-500">premium</span>
           </h1>
         </div>
@@ -112,12 +111,11 @@
     <section class="py-10 mb-10 text-center">
       <h1 class="text-[1.8rem] md:text-[2.2rem] lg:text-[2.8rem] font-bold text-[#1E6FBA] leading-tight mb-4"
         data-aos="fade-up" data-aos-duration="900" data-aos-delay="120">
-        Premium Laundry & Dry Cleaning Services
+        Premium Cleaning & Home Care Services
       </h1>
       <p class="text-base md:text-lg text-[#718096] max-w-[700px] mx-auto" data-aos="fade-up" data-aos-duration="800"
         data-aos-delay="200">
-        Experience the luxury of fresh, clean clothes with our professional pickup, delivery, and VIP attention
-        services.
+       Experience the luxury of a spotless home with our professional and personalized cleaning, scheduling, and Express Gold VIP attention.
       </p>
     </section>
 
@@ -139,11 +137,11 @@
         </div>
         <div class="flex items-center gap-3 mb-4">
           <i class="fas fa-envelope text-[#1E6FBA] text-lg w-6 text-center"></i>
-          <div>contact@luxelaundry.co.uk</div>
+          <div>expressgold@luxecleaning.co.uk</div>
         </div>
         <div class="flex items-center gap-3 mb-4">
           <i class="fab fa-instagram text-[#1E6FBA] text-lg w-6 text-center"></i>
-          <div>@luxelaundry_uk</div>
+          <div>@luxecleaning_uk</div>
         </div>
         <div class="flex flex-col gap-3 mt-6 sm:flex-row">
           <button
@@ -152,7 +150,7 @@
             <i class="fas fa-calendar-check"></i>Book Appointment
           </button>
           <a class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-base bg-white text-[#1E6FBA] border border-[#1E6FBA] hover:bg-[#E8F2FC] transition"
-            href="mailto:contact@luxelaundry.co.uk">
+            href="mailto:expressgold@luxeccleaning.co.uk">
             <i class="fas fa-envelope"></i>Email Us
           </a>
         </div>
@@ -188,9 +186,6 @@
       </div>
     </div>
 
-    <footer class="text-center py-8 text-[#718096] text-sm mt-10 border-t border-[#E2E8F0]">
-      <p>&copy; 2025 LuxeLaundry • All rights reserved.</p>
-    </footer>
   </div>
 
   <!-- Appointment Modal -->
@@ -200,7 +195,7 @@
       <button
         class="absolute top-4 right-4 text-2xl text-[#718096] hover:text-[#1E6FBA] bg-transparent rounded-full w-8 h-8 flex items-center justify-center transition"
         onclick="closeModal()">&times;</button>
-      <h3 class="text-xl font-semibold text-[#1E6FBA] mb-6">Book a Laundry Appointment</h3>
+      <h3 class="text-xl font-semibold text-[#1E6FBA] mb-6">Get a Quote & Book Your Premium Clean</h3>
       <input type="text" id="book-name" placeholder="Full Name" required
         class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] mb-4 text-base focus:outline-none focus:border-[#1E6FBA] focus:ring-2 focus:ring-[#1E6FBA]/20 transition" />
       <input type="tel" id="book-phone" placeholder="Phone Number" required
@@ -212,9 +207,12 @@
       <select id="book-service" required
         class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] mb-4 text-base focus:outline-none focus:border-[#1E6FBA] focus:ring-2 focus:ring-[#1E6FBA]/20 transition">
         <option value="">Select Service</option>
-        <option value="Standard Wash">Office Cleaning</option>
-        <option value="Dry Cleaning">Home Cleaning</option>
-        <option value="Premium Care">Premium Care</option>
+        <option value="Office Cleaning">Office Cleaning</option>
+        <option value="Home Cleaning">Home Cleaning</option>
+        <option value="Glass Cleaning">Glass Cleaning</option>
+        <option value="Airbnb Cleaning">Airbnb Cleaning</option>
+        <option value="Mould Removal">Mould Removal</option>
+        <option value="Deep End-of-Tenancy Clean">Deep End-of-Tenancy Clean</option>
       </select>
       <input type="text" id="book-location" placeholder="Your Address" required
         class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] mb-4 text-base focus:outline-none focus:border-[#1E6FBA] focus:ring-2 focus:ring-[#1E6FBA]/20 transition" />
@@ -269,7 +267,7 @@
         title="WhatsApp">
         <i class="fab fa-whatsapp" style="color: #25D366;"></i>
       </a>
-      <a href="mailto:contact@luxelaundry.co.uk"
+      <a href="mailto:info@expressgold.co.uk"
         class="flex items-center justify-center w-12 h-12 text-lg transition bg-white rounded-full shadow-md hover:-translate-y-1"
         title="Email">
         <i class="fas fa-envelope" style="color: #EA4335;"></i>
@@ -297,7 +295,7 @@
     class="fixed right-6 bottom-28 w-[350px] max-w-[calc(100vw-60px)] rounded-xl shadow-2xl overflow-hidden hidden z-50 bg-white"
     id="chatbox" data-aos="fade-left" data-aos-duration="700" data-aos-delay="360">
     <div class="bg-[#1E6FBA] text-white px-5 py-4 flex justify-between items-center">
-      <div class="text-base font-semibold">Laundit cleaning service Assistant</div>
+      <div class="text-base font-semibold">Express Gold Assistant</div>
       <button
         class="flex items-center justify-center w-8 h-8 text-xl text-white transition bg-transparent border-none rounded-full hover:bg-white/20"
         onclick="closeChatbox()">&times;</button>
@@ -316,13 +314,13 @@
   </div>
 
   <!-- Footer -->
-  <footer id="contact" class="py-12 text-white bg-gray-900">
+  <footer id="contact" class="py-12 text-white bg-gray-900" data-aos="fade-up" data-aos-duration="800" data-aos-delay="160">
     <div class="container px-4 mx-auto">
       <div class="grid gap-8 md:grid-cols-4">
-        <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="140">
-          <h3 class="mb-4 text-2xl font-bold text-gradient">LAUNDIT</h3>
+        <div data-aos="fade-right" data-aos-duration="700" data-aos-delay="180">
+          <h3 class="mb-4 text-2xl font-bold text-gradient">EXPRESS GOLD</h3>
           <p class="text-gray-400">
-            Professional cleaning services for a better and healthier life.
+Express Gold: Premium home cleaning and integrated home care for a simplified, luxurious life.          </p>
           </p>
           <div class="flex mt-6 space-x-4">
             <a href="#" class="transition hover:text-customPurple-500">
@@ -346,7 +344,7 @@
           </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+        <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="220">
           <h4 class="mb-4 text-lg font-semibold">Quick Links</h4>
           <ul class="space-y-2 text-gray-400">
             <li>
@@ -356,7 +354,7 @@
               <a href="about.html" class="transition hover:text-customPurple-500">About Us</a>
             </li>
             <li>
-              <a href="tailwind.html" class="transition hover:text-customPurple-500">Services</a>
+              <a href="services.html" class="transition hover:text-customPurple-500">Services</a>
             </li>
             <li>
               <a href="#gallery" class="transition hover:text-customPurple-500">Gallery</a>
@@ -364,7 +362,7 @@
           </ul>
         </div>
 
-        <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="260">
+        <div data-aos="fade-left" data-aos-duration="700" data-aos-delay="260">
           <h4 class="mb-4 text-lg font-semibold">Our Services</h4>
           <ul class="space-y-2 text-gray-400">
             <li>
@@ -382,7 +380,7 @@
           </ul>
         </div>
 
-        <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="320">
+        <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
           <h4 class="mb-4 text-lg font-semibold">Contact Info</h4>
           <ul class="space-y-3 text-gray-400">
             <li class="flex items-start">
@@ -397,15 +395,15 @@
               <svg class="w-5 h-5 mr-2 text-customPurple-500" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
-              +44 7377 664 964 
+            </svg>
+              +44 7377 664 964
             </li>
             <li class="flex items-center">
               <svg class="w-5 h-5 mr-2 text-customPurple-500" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg>
-              info@laundit.com
+              info@expressgold.co.uk
             </li>
           </ul>
         </div>
@@ -413,7 +411,7 @@
 
       <div class="pt-8 mt-8 text-center text-gray-400 border-t border-gray-800">
         <p>
-          &copy; 2025 Laundit. All rights reserved. |
+          &copy; 2025 Express Gold. All rights reserved. |
           <a href="#" class="transition hover:text-customPurple-500">Privacy Policy</a>
           |
           <a href="#" class="transition hover:text-customPurple-500">Terms of Service</a>
@@ -657,7 +655,7 @@
         return;
       }
       const messageLines = [
-        "Hello Laundit cleaning services! I would like to book an appointment:",
+        "Hello Express Gold cleaning services! I would like to book an appointment:",
         "",
         "Name: " + name,
         "Phone: " + phone,
@@ -689,7 +687,7 @@
       document.getElementById('chat-input').focus();
       if (!isFirstGreetingSent) {
         setTimeout(() => {
-          appendMessage('bot', "Welcome! I'm your virtual assistant. Please ask me about **Prices**, **Booking**, or just say **Hello**!");
+          appendMessage('bot', "Welcome! I'm your virtual assistant for Express Gold. Please ask me about **Prices**, **Booking**, or just say **Hello**!");
           isFirstGreetingSent = true;
         }, 500); // Small delay to look natural
       }
@@ -764,9 +762,9 @@
         if (lowerText === 'help' || lowerText === 'menu' || lowerText === 'options' || lowerText === 'what can you do' ) {
           response = "I can help with: Prices, Booking, Location, or tell you about our Services (type 'services').";
         }
-        // Prices/Cost
-        else if (lowerText.includes('price') || lowerText.includes('cost')) {
-          response = "Typical prices: Standard Wash £15 • Dry Cleaning £25 • Premium Care £40. Want to book one?";
+         // Prices/Cost (now returns services instead of prices)
+        else if (lowerText.includes('price') || lowerText.includes('cost') || lowerText.includes('pricing')) {
+          response = "We don't show prices here. Here are our services: Office Cleaning, Home Cleaning, Glass Cleaning, Airbnb Cleaning, Mould Removal, Deep End-of-Tenancy Clean, Standard Wash, Dry Cleaning, Premium Care. Which one would you like to know more about or book?";
         }
         // Booking/Appointment
         else if (lowerText.includes('book') || lowerText.includes('appointment')) {
